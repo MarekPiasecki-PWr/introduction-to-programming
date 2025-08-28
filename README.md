@@ -1,5 +1,5 @@
--# introduction-to-programming
--LECTURE and LABORATORY on Structured and Procedural programming, with examples in C and C++
+# introduction-to-programming
+LECTURE and LABORATORY on **Structured** and **Procedural** programming, with examples in **C** and C++
 
 
 # Wroclaw University of Science and Technology
