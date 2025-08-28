@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr" lang="en">
+
+<head>
+<meta content="text/html; charset=ISO-8859-2" http-equiv="content-type">
+<meta content="Marek Piasecki" name="author">
+<title>[ITP] ARCHIVES - Introduction to Programming 2024 - LABORATORY</title>
+</head>
+
+<body>
+<span style="font-style: italic">
+<span style="font-weight: bold; color: red;">ARCHIVES '2024: &nbsp;&nbsp;</span> 
+
+"Introduction to Programming" &nbsp;LABORATORY - <a href="https://wefim.pwr.edu.pl/en/">Faculty of Electronics, Photonics and Microsystems</a>&nbsp;
+-&nbsp; Electronic and Computer Engineering&nbsp; (ECE)
+</span>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h1 style="font-family: Arial;">LABORATORY <u style="background-color: yellow;">&nbsp;L12&nbsp;</u> : Array of struct (simple database)</h2>
+
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Introductory description:</span>
+</div>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<p dir="ltr" style="text-align: left;">Materials for self-studying and laboratory preparation: <br>&nbsp; - article 1: <a href="https://www.codesansar.com/c-programming/array-structure.htm">Array of Structure in C with Examples</a><br>&nbsp; - article 2: <a href="https://aticleworld.com/array-of-structures-in-c/">Array of Structures in C with practical example program</a><br>&nbsp; - tutorial: <a href="https://iq.opengenus.org/array-of-structure-in-c/">Array of structure in C</a><br>&nbsp; - lecture notes: <a href="https://ycpcs.github.io/cs101-summer2014/lectures/lecture19.html">Arrays of structs</a> (with functions)<br><br>Lecture slides <a href="http://marek.piasecki.staff.iiar.pwr.wroc.pl/dydaktyka/itp/2020_L09_struct.pdf">L08 - Struct</a>, <br>&nbsp; - look at <strong>Example-1</strong> <em><span class="" style="color: rgb(152, 202, 62);">(on the slide no 5)</span></em> <br>&nbsp; - and <strong>Example-2</strong>&nbsp;&nbsp;&nbsp;&nbsp; <em><span class="" style="color: rgb(152, 202, 62);">(slides 6-7)</span></em><br></p>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L12.T1</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task to be performed:</span>
+</div>
+<br>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<div><u>In-memory <strong>database</strong>, using the data representation in the form of <strong><span class="" style="background-color: rgb(255, 207, 53);">array of struct</span></strong>.</u></div>
+<div><br></div>
+<div>Define the <strong><span class="" style="background-color: rgb(255, 207, 53);">N-elements array</span></strong> (<em>pseudo-dynamic with with an additional counter that indicates
+        the size/amount of entered data, or
+        dynamicaly allocated</em>) <strong>of
+    </strong><strong>structures</strong> <strong>defined in Task2 from laboratory 1</strong><strong>1</strong>. <br></div>
+<div><br></div>
+<div>Write a program that implements
+    <span class="" style="background-color: rgb(255, 207, 53);"><strong>menu</strong></span> with following functionalities of database:
+</div>
+<div>
+    <ol>
+        <li>function that <strong>reads / adds</strong>
+            a new elements to this array,</li>
+        <li>function that <strong>displays</strong>
+            all the content of database (all elements of array),</li>
+        <li>function that <strong>modify</strong>
+            / <strong>updates</strong>
+            the content of selected database element,<br><br></li>
+        <li>function that <strong>delete</strong>
+            / <strong>remove</strong>
+            the selected element from database,</li>
+        <li>function that that allows <strong>filtering</strong> / <strong>searching</strong> the
+            database to display only elements matching the given
+            criteria.<br><strong>For
+                example:</strong> <em>display the list of second-hand cars in database, but only
+                "Fiat" brand,
+                not older than 15 years, with vehicle mileage less then 150 thousand
+                kilometers.</em><br></li>
+    </ol>
+</div>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK *<u>L12.EXTRA</u> (optional)</h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task:</span>
+</div>
+<br>
+<div style="margin-left: 40px;font-family: Arial;">
+
+Expand the program <strong>Lab12_Task1</strong> with additional functionality of <strong>alphabetical sorting</strong> the database content using two different <strong>selected fields</strong>/<strong>columns</strong> as ordering criterion.<br><br>
+
+For example:<br>
+<div>&nbsp;<strong>a)</strong> list of cars, alphabetically sorted by <strong>brandname&nbsp;</strong> <em><span class="" style="color: rgb(125, 159, 211);">( Alpha Romeo, Audi, BMW, Citroen, . . . )</span></em><strong><br>&nbsp;b)</strong> list of cars, sorted <strong>by price</strong> of the car<strong>&nbsp;<em><span class="" style="color: rgb(125, 159, 211);"> </span></em></strong><em><span class="" style="color: rgb(125, 159, 211);">( 5400, 7210, 10500, 13000, . . . )</span></em><strong><br>&nbsp;c) </strong>list of cars, sorted <strong>by engine type</strong><strong>&nbsp;<em><span class="" style="color: rgb(125, 159, 211);"> </span></em></strong><em><span class="" style="color: rgb(125, 159, 211);">( Diesel, Electric, Hybrid, Hydrogen, LPG, Petrol, )</span><strong><br></strong></em></div>
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<span style="font-style: italic">
+<a href="../[ITP] LABORATORY Introduction to Programming 2024.html">Return to the main description</a>
+  of the entire laboratory
+</span>
+
+</body></html>

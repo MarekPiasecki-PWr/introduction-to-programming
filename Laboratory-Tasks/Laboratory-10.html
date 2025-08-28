@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr" lang="en">
+
+<head>
+<meta content="text/html; charset=ISO-8859-2" http-equiv="content-type">
+<meta content="Marek Piasecki" name="author">
+<title>[ITP] ARCHIVES - Introduction to Programming 2024 - LABORATORY</title>
+</head>
+
+<body>
+<span style="font-style: italic">
+<span style="font-weight: bold; color: red;">ARCHIVES '2024: &nbsp;&nbsp;</span> 
+
+"Introduction to Programming" &nbsp;LABORATORY - <a href="https://wefim.pwr.edu.pl/en/">Faculty of Electronics, Photonics and Microsystems</a>&nbsp;
+-&nbsp; Electronic and Computer Engineering&nbsp; (ECE)
+</span>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h1 style="font-family: Arial;">LABORATORY <u style="background-color: yellow;">&nbsp;L10&nbsp;</u> : Processing texts in C-string representation (Part-2)</h2>
+
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Introductory description:</span>
+</div>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<p dir="ltr">Continuation
+    of exercises with the creation of programs illustrating the
+    processing of textual data, represented as an array of characters
+    (C-string).<br><span><u>Example tasks:</u></span><br>
+
+</p>
+<ol>
+    <li>Write a function to remove first occurrence of a
+        character from string.</li>
+    <li>Write a functionto replace first/last occurrence of a
+        character within another string.</li>
+    <li>Write a function to find first occurrence of a word
+        in a given string.</li>
+    <li>Write a function to remove all occurrences of a word
+        in the given string.</li>
+    <li>Write a function to replace all occurrences of a word
+        with the given pattern.<br>
+        <br>
+    </li>
+    <li>Write a function to trim leading white spaces from
+        the begining of the given string.</li>
+    <li>Write a function to trim trailing white space from
+        the tail of the given string.</li>
+    <li>Write a function to remove all extra blank spaces
+        from a given string.</li>
+</ol>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L10.T1</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task to be performed:</span>
+</div>
+<br>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<div><strong>DELETE characters</strong> (and shrink / move to left / the rest of the text, after deleted fragment)</div>
+<div><br></div>
+<div><strong></strong>Create and test your own implementation of function:<br>&nbsp;&nbsp;<span class="" style="background-color: rgb(255, 207, 53);"> char* </span><strong><span class="" style="background-color: rgb(255, 207, 53);">strdel(</span></strong><span class="" style="background-color: rgb(255, 207, 53);"> char* </span><strong><span class="" style="background-color: rgb(255, 207, 53);">text</span></strong><span class="" style="background-color: rgb(255, 207, 53);">, int </span><strong><span class="" style="background-color: rgb(255, 207, 53);">deleteStartPosition</span></strong><span class="" style="background-color: rgb(255, 207, 53);">, int </span><strong><span class="" style="background-color: rgb(255, 207, 53);">deleteLength</span></strong><span class="" style="background-color: rgb(255, 207, 53);"> )&nbsp;</span> <br></div>
+<div>which deletes the specified sub-section (<strong>deleteLength</strong> characters starting from <strong>deleteStartPosition</strong>)<br>from the <strong>text</strong> array (C-string) provided as the first argument.</div>
+<div><br></div>
+<div>Example call:</div>
+<div><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp; char modifiedText[100] = "<span class="" style="background-color: rgb(152, 202, 62);">abc<strong>1234</strong>xyz</span>"; &nbsp; </span><br></div>
+<div><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp; </span><strong><span class="" style="background-color: rgb(255, 207, 53);">strdel</span></strong><span class="" style="background-color: rgb(255, 207, 53);">( </span><strong><span class="" style="background-color: rgb(255, 207, 53);">modifiedText</span></strong><span class="" style="background-color: rgb(255, 207, 53);">, </span><strong><span class="" style="background-color: rgb(255, 207, 53);">3</span></strong><span class="" style="background-color: rgb(255, 207, 53);">, </span><strong><span class="" style="background-color: rgb(255, 207, 53);">4</span></strong><span class="" style="background-color: rgb(255, 207, 53);"> );&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="" style="background-color: rgb(255, 255, 255);"> &nbsp; //&nbsp; &lt;&lt;-- call of </span></span><strong><span class="" style="background-color: rgb(255, 255, 255);">strdel(...)</span></strong><br></div>
+<div><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp; printf( "%s", modifiedText );&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; </span><br><br>will result with output: <strong><span class="" style="background-color: rgb(152, 202, 62);">abc</span><span class="" style="background-color: rgb(125, 159, 211);">xyz</span></strong>&nbsp; </div>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L10.T2</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task:</span>
+</div>
+<br>
+<div style="margin-left: 40px;font-family: Arial;">
+
+<div><strong>INSERT characters</strong> (prepare space, shift to further positions the rest of the text, after inserting position)</div>
+<div><br></div>
+<div><strong></strong>Create and test your own implementation of function:<br>&nbsp;<span class="" style="background-color: rgb(255, 207, 53);">&nbsp; char* </span><strong><span class="" style="background-color: rgb(255, 207, 53);">strins(</span></strong><span class="" style="background-color: rgb(255, 207, 53);"> char* </span><strong><span class="" style="background-color: rgb(255, 207, 53);">text</span></strong><span class="" style="background-color: rgb(255, 207, 53);">, char* </span><strong><span class="" style="background-color: rgb(255, 207, 53);">textToInsert</span></strong><span class="" style="background-color: rgb(255, 207, 53);">, int </span><strong><span class="" style="background-color: rgb(255, 207, 53);">insert</span></strong><strong><span class="" style="background-color: rgb(255, 207, 53);">StartPosition</span></strong><span class="" style="background-color: rgb(255, 207, 53);"> )&nbsp; </span><br></div>
+<div>which inserts the specified <strong>textToInsert</strong> characters (starting from <strong>insertStartPosition</strong>)<br>inside the <strong>text</strong> array (C-string) provided as the first argument.</div>
+<div><br></div>
+<div>Example call:</div>
+<div><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp; char modifiedText[100] = "</span><strong><span class="" style="background-color: rgb(152, 202, 62);">abcxyz</span></strong><span class="" style="background-color: rgb(255, 207, 53);">";&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br></div>
+<div><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp; </span><strong><span class="" style="background-color: rgb(255, 207, 53);">strins</span></strong><span class="" style="background-color: rgb(255, 207, 53);">( </span><strong><span class="" style="background-color: rgb(255, 207, 53);">modifiedText</span></strong><span class="" style="background-color: rgb(255, 207, 53);">, </span><strong><span class="" style="background-color: rgb(255, 207, 53);">"<span class="" style="background-color: rgb(125, 159, 211);">1234</span>", 3</span></strong><strong></strong><span class="" style="background-color: rgb(255, 207, 53);"> );&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // &lt;&lt;-- call of </span><strong><span class="" style="background-color: rgb(255, 207, 53);">strins(...)</span></strong><br></div>
+<div><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp; printf( "%s", modifiedText );&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br><br>will result with output: <strong><span class="" style="background-color: rgb(152, 202, 62);">abc<span class="" style="background-color: rgb(125, 159, 211);">1234</span>xyz</span></strong>&nbsp; </div>
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK *<u>L10.EXTRA</u> (optional)</h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task:</span>
+</div>
+<br>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<div><strong>ADVANCED manipulations on the C-string<br></strong></div>
+<div><strong><br></strong></div>
+<div>Write the
+    super formating function, for advanced styling of the text entered by human users<br>(which may contain <span><span><span>common formatting errors: extra spaces, badly capitalised letters, etc.)<br>useful for standarizing </span></span></span>"geografical names" and other identifiers, before storing them in database.<br></div>
+<br>
+
+<div>The new function:<br>&nbsp;<span class="" style="background-color: rgb(255, 207, 53);">&nbsp; char* </span><strong><span class="" style="background-color: rgb(255, 207, 53);">superFormat</span></strong><span class="" style="background-color: rgb(255, 207, 53);">( char* text )&nbsp; </span><br><br> should:<br>
+    - trim leading
+    spaces&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; eg.&nbsp;&nbsp;&nbsp; <strong>"<span class="" style="background-color: rgb(125, 159, 211);"><span class="" style="background-color: rgb(239, 69, 64);">___</span>Los&nbsp;&nbsp;&nbsp;&nbsp;
+            Angeles&nbsp;&nbsp;&nbsp; </span>"</strong><br>
+    - trim trailing spaces
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    eg.&nbsp;&nbsp;&nbsp; <strong>"<span class="" style="background-color: rgb(125, 159, 211);">
+            &nbsp;&nbsp;Los&nbsp;&nbsp;&nbsp;&nbsp;
+            Angeles<span class="" style="background-color: rgb(239, 69, 64);">____</span></span>"<br></strong>
+    - remove extra (multiple) blank spaces
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    eg.&nbsp;&nbsp;&nbsp; <strong>"<span class="" style="background-color: rgb(125, 159, 211);">&nbsp;&nbsp;
+            Los <span class="" style="background-color: rgb(239, 69, 64);">____</span>Angeles&nbsp;&nbsp;&nbsp;
+        </span>"</strong><br>
+    - change first letters of words to uppercase (capitalise)<br>
+    - change following letters of words to lowercase</div>
+<div>- ensure, that there is exactly one space after every dot <span class="" style="background-color: rgb(125, 159, 211);">"."</span> or comma <span class="" style="background-color: rgb(125, 159, 211);">","</span><br></div>
+<div><br></div>Example call:<div><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp; char textToModify[100] = "<span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp; </span></span><strong><span class="" style="background-color: rgb(152, 202, 62);">dON'T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; WOrry.be haPPY</span></strong><span class="" style="background-color: rgb(255, 207, 53);"><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>";&nbsp; </span><br></div>
+<div><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp; </span><strong><span class="" style="background-color: rgb(255, 207, 53);">superFormat</span></strong><span class="" style="background-color: rgb(255, 207, 53);">( textToModify</span><strong><span class="" style="background-color: rgb(255, 207, 53);"> </span></strong><span class="" style="background-color: rgb(255, 207, 53);">);&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //such a call of <strong>superFormat(...)</strong><br></div>
+<div><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp; printf( "%s", textToModify );&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>will result with output: <strong><span class="" style="background-color: rgb(152, 202, 62);">Don't Worry. Be Happy</span></strong>&nbsp; </div><br>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<span style="font-style: italic">
+<a href="../[ITP] LABORATORY Introduction to Programming 2024.html">Return to the main description</a>
+  of the entire laboratory
+</span>
+
+</body></html>

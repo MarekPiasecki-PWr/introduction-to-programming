@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr" lang="en">
+
+<head>
+<meta content="text/html; charset=ISO-8859-2" http-equiv="content-type">
+<meta content="Marek Piasecki" name="author">
+<title>[ITP] ARCHIVES - Introduction to Programming 2024 - LABORATORY</title>
+</head>
+
+<body>
+<span style="font-style: italic">
+<span style="font-weight: bold; color: red;">ARCHIVES '2024: &nbsp;&nbsp;</span> 
+
+"Introduction to Programming" &nbsp;LABORATORY - <a href="https://wefim.pwr.edu.pl/en/">Faculty of Electronics, Photonics and Microsystems</a>&nbsp;
+-&nbsp; Electronic and Computer Engineering&nbsp; (ECE)
+</span>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h1 style="font-family: Arial;">LABORATORY <u style="background-color: yellow;">&nbsp;L7&nbsp;</u> : Introduction to Functions</h2>
+
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Materials for self-preparation for laboratory classes:</span>
+</div>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<ul>
+    <li>W3schools - <a href="https://www.w3schools.com/c/c_functions.php">C Functions</a> <br></li>
+    <li>W3schools - <a href="https://www.w3schools.com/c/c_functions_decl.php">C Functions declaration</a></li>
+</ul>
+<div>Slides for <a href="../Lecture-Slides/2024_L05_Functions.pdf">Lecture_05</a><br></div>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L7.T1</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task to be performed:</span>
+</div>
+<br>
+<div style="margin-left: 40px;font-family: Arial;">
+
+<div>Write a new "super" program, which will combine into one file, selected
+    programs
+    (tasks solutions) created during previous laboratories. Please select 2 tasks/sub-programs from <strong>laboratory 3</strong>, two from <strong>laboratory 4</strong>, and two from <strong>laboratory 5</strong>, or any similar combination.<br><br>In the simplest
+    version, all previous functions</div>
+<div>&nbsp;&nbsp;
+    &nbsp; int
+    <strong>main</strong>()
+</div>
+<br>
+could be converted to&nbsp; parameterless
+sub-functions, eg.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+void <strong>DisplayMyBusinessCard</strong>( void )<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+void <strong>ClassifyPeopleHeight</strong>( void )<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+void <strong>ClassifyPressedKeys</strong>( void )<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+void <strong>PrintChristmasTree</strong>( void )<br>
+&nbsp;&nbsp; . . .&nbsp; etc. <br><br>
+New function main(), in this "super" program, can sequentially call all the above
+sub-functions.<br>It can look similary to the example program, from second/middle column, on the slide/page number 2 (from lecture 5): <a href="http://marek.piasecki.staff.iiar.pwr.wroc.pl/dydaktyka/itp/2020_L05_functions.pdf">L05_functions.pdf</a><br><br><strong>
+    Hint:</strong>
+<em>
+to concatenate
+the code of existing
+programs,
+you can use commands
+operating on a editor's
+clipboard ( Cut / Copy / Paste )
+</em>
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L7.T2</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task:</span>
+</div>
+<br>
+<div style="margin-left: 40px;font-family: Arial;">
+
+Expand the program (Lab7_Task1) by adding the <span class="" style="background-color: rgb(152, 202, 62);">"Menu"</span>, which
+allows
+to control the sequence of executed/called functions and exit the
+program. Sample menu may have options:<br><br>
+<span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp;&nbsp;
+    Menu:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br><span class="" style="background-color: rgb(255, 207, 53);">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    1. Display my business card&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br><span class="" style="background-color: rgb(255, 207, 53);">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    2. Classify the height of person&nbsp;&nbsp;&nbsp;&nbsp; </span><br><span class="" style="background-color: rgb(255, 207, 53);">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    3. Print Christmas Tree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br><span class="" style="background-color: rgb(255, 207, 53);">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    4. Exit&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br>
+<div><span class="" style="background-color: rgb(255, 207, 53);">
+        &nbsp;&nbsp;&nbsp;
+        Select the number of operation: ... ?&nbsp; </span><br></div>
+<div><br></div>
+<div>Using this menu, it should be possible to execute <span lang="en"><span title="">the functions in any order (decided during execution runtime)</span></span>.<br></div>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK *<u>L7.EXTRA</u> (optional)</h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task:</span>
+</div>
+<br>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+Advanced students,may write a more difficult version of "MENU",<br>implemented in the form of separate function with arguments:<br><strong><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp; int Menu( char* menu_options[], int number_of_options, int default_option);&nbsp;&nbsp;&nbsp; </span></strong><br>returning the <strong>int</strong> index of option selected by pressing the "ENTER" keyboard button.<br> <br>The choice of options could be made by using the "ARROW" keys, to move the options pointer / backlight.<br><br>
+<div><span lang="en"><span title="">It can be a simple menu with "moving arrow":<br><img src="img-L07\arrow_menu.jpg" alt="Arrow menu" width="299" height="158" class="img-fluid atto_image_button_text-bottom"><br></span></span></div>
+<div><span lang="en"><span title=""><br></span></span></div>
+<div><span lang="en"><span title="">or more advanced, using the "background highlighting", <br>like </span></span>options selection in your programming IDE:
+
+    <br><img src="img-L07\IDE_menu.jpg" alt="IDE menu" width="195" height="333" class="img-fluid atto_image_button_text-bottom">
+</div>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<span style="font-style: italic">
+<a href="../[ITP] LABORATORY Introduction to Programming 2024.html">Return to the main description</a>
+  of the entire laboratory
+</span>
+
+</body></html>

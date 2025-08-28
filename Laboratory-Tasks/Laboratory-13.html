@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr" lang="en">
+
+<head>
+<meta content="text/html; charset=ISO-8859-2" http-equiv="content-type">
+<meta content="Marek Piasecki" name="author">
+<title>[ITP] ARCHIVES - Introduction to Programming 2024 - LABORATORY</title>
+</head>
+
+<body>
+<span style="font-style: italic">
+<span style="font-weight: bold; color: red;">ARCHIVES '2024: &nbsp;&nbsp;</span> 
+
+"Introduction to Programming" &nbsp;LABORATORY - <a href="https://wefim.pwr.edu.pl/en/">Faculty of Electronics, Photonics and Microsystems</a>&nbsp;
+-&nbsp; Electronic and Computer Engineering&nbsp; (ECE)
+</span>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h1 style="font-family: Arial;">LABORATORY <u style="background-color: yellow;">&nbsp;L13&nbsp;</u> : Accessing text data files using the &lt;stdio.h&gt;  library</h2>
+
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Introductory description:</span>
+</div>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<p dir="ltr" style="text-align: left;"><span>Materials for self-studying and laboratory preparation: <br></span></p>
+<ol dir="ltr">
+    <li style="text-align: left;"><span><strong>Saving</strong><span> or </span><strong>loading</strong> simple <strong>sequence of numbers</strong>&nbsp;&nbsp;&nbsp; (<em><span class="" style="color: rgb(152, 202, 62);">for example: 24 temperature measurements in one day)</span></em><br>Review examples&nbsp; <strong>TXT-3</strong>, <strong>-4</strong>, <strong>-5</strong>&nbsp; from additional slides for lecture 11:<br><span>&nbsp; - </span><strong><a href="../Lecture-Slides/2024_L11a_Examples_of_TEXT_files.pdf">Examples of 'text' file operations (PDF)</a>&nbsp; <br>&nbsp;&nbsp; <br></strong></span></li>
+    <li style="text-align: left;"><span>Adding <strong>persistent storage</strong> for array-of-struct database application<em>&nbsp;&nbsp; <span class="" style="color: rgb(152, 202, 62);">(made during lab 11 and 12)</span></em><span class="" style="color: rgb(152, 202, 62);"> </span><br><br>
+
+Study <strong>page 3</strong> and <strong>4</strong> from lecture slides<br>
+&nbsp; - <a href="../Lecture-Slides/2024_L10_Files.pdf"><span></span><strong>Lecture_10 - Files (PDF)</strong></a>&nbsp; &nbsp;&nbsp; <em><span class="" style="color: rgb(152, 202, 62);">// fprintf( file, ”%s %s %d \n”, student_array[ i ].surname, . . .</span></em><br><br>or section "Writing Formatted String to a File" in tutorialspoint materials<br>&nbsp; - <a href="https://www.tutorialspoint.com/cprogramming/c_file_io.htm">C
+                - file I/O</a>&nbsp;&nbsp; &nbsp; &nbsp; <em><span class="" style="color: rgb(152, 202, 62);">// fprintf(fp, "%d %f %s\n", emp[i].age, emp[i].percent, emp[i].name);</span></em><a href="https://www.programiz.com/c-programming/c-file-examples"><br>
+            </a></span></li>
+</ol>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L13.T1</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task to be performed:</span>
+</div>
+<br>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+Write the first program, which reads <strong>3 numbers from keyboard</strong><br>and then store them in the disc <strong>text file</strong> named <strong>"three_numbers.txt"</strong><br>
+<div><em><span class="" style="color: rgb(152, 202, 62);">(HINT: in such program functions: </span><strong><span class="" style="color: rgb(152, 202, 62);">fopen</span></strong><span class="" style="color: rgb(152, 202, 62);">, </span><strong><span class="" style="color: rgb(152, 202, 62);">fprintf</span></strong><span class="" style="color: rgb(152, 202, 62);">, </span><strong><span class="" style="color: rgb(152, 202, 62);">fclose</span></strong><span class="" style="color: rgb(152, 202, 62);"> should be used)</span></em><br><br>
+Then manualy check on the disc, if the file was created, and what is the "content" of this file.<br><br>As a supplementary material, ilustrating such file operations, you can take <strong>slides 2-3-4-5</strong> from presentation: <a href="../Lecture-Slides/2024_L11a_Examples_of_TEXT_files.pdf">Examples of text file operations (PDF)</a></div><br>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L13.T2</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task:</span>
+</div>
+<br>
+<div style="margin-left: 40px;font-family: Arial;">
+
+Write a second program, which reads several integer numbers from external text
+file <strong>"numbers.txt"</strong>, and then <strong>calculate</strong> and print on the screen some basic <strong>statistics</strong> (sum,
+arithmetic average, maximum and minimum) for this sequence of loaded
+numbers.<div><br></div>
+<div><strong><u>N</u><u>OTES</u></strong> <br><strong>Note_1</strong>) Some hints to part (b), can be found in the example <strong>TXT-4</strong> on the page number <strong>5</strong>, in the slides: <a href="../Lecture-Slides/2024_L11a_Examples_of_TEXT_files.pdf">Examples of 'text' file operations (PDF)</a><br><br></div>
+<div><strong>Note_2</strong>) The scanf operation may fail, when the subsequent file data is not complete<br> (for example: only two fields in place of expected three)<br>or when the data is not valid <br><em><span class="" style="color: rgb(152, 202, 62);">(for example: alphabetical data in place of expected numerical data)</span></em><br>To handle such a case, we can check the value of integer number returned by scanf:</div>
+<div><br></div>
+<div><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp; int </span><strong><span class="" style="background-color: rgb(152, 202, 62);">result</span></strong><span class="" style="background-color: rgb(152, 202, 62);"> = </span><strong><span class="" style="background-color: rgb(152, 202, 62);">fscanf</span></strong><span class="" style="background-color: rgb(152, 202, 62);">( database_file, "%s %s %d",&nbsp; .&nbsp; .&nbsp; .&nbsp;&nbsp; );</span><br><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp; if( </span><strong><span class="" style="background-color: rgb(152, 202, 62);">result</span></strong><span class="" style="background-color: rgb(152, 202, 62);">==3 )&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; number_of_loaded++;&nbsp;&nbsp;<span class="" style="background-color: rgb(255, 255, 255);">&nbsp; <span class="" style="color: rgb(152, 202, 62);"><em>// successful read</em></span></span></span><br><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp; else&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br></span></div>
+<div><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; break;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="" style="background-color: rgb(255, 255, 255);">&nbsp; <em><span class="" style="color: rgb(152, 202, 62);">// fail</span></em></span></span></div>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L13.T3</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task:</span>
+</div>
+<br>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<div>Extend the functionalities of database program from laboratory 12,
+    adding
+    archiving operations (<strong>saveMyDatabase</strong> and <strong>loadMyDatabase</strong>), which allow for storing the whole database content in the
+    external memory (in the form of binary or text file).</div>
+<div><br></div>
+<div>Some hints, how to <strong>save</strong>/<strong>load</strong> the array of structures, can be found on pages number <strong>2</strong> and <strong>3</strong> in the lecture slides <a href="../Lecture-Slides/2024_L10_Files.pdf">LECTURE_10 - Files (PDF)</a></div>
+<div><br></div>
+<div><u><strong>NOTE</strong></u><br> Instruction&nbsp;<span role="presentation" dir="ltr">&nbsp;<span class="" style="background-color: rgb(255, 207, 53);"> fscanf( file, ”</span></span><span role="presentation" dir="ltr" class="" style="background-color: rgb(255, 207, 53);"><strong>%s</strong> <strong>%s</strong> <strong>%d</strong></span><span role="presentation" dir="ltr" class="" style="background-color: rgb(255, 207, 53);">” , student_array[ i ].<strong>surname</strong>, </span><span role="presentation" dir="ltr" class="" style="background-color: rgb(125, 159, 211);"><span class="" style="background-color: rgb(255, 207, 53);">student_array[ i ].<strong>name</strong>, &amp;(student_array[ i ].<strong>age</strong>) );</span><span class="" style="background-color: rgb(255, 255, 255);"><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;</span>&nbsp; </span></span>is reading text <strong>lines</strong> constaining the <strong>fields</strong> separated by <strong>spaces</strong>.</div>
+<div><br></div>
+<div>
+    <div>It is also possible to read <strong>fields</strong> separated by other "<strong>separators</strong>", for example: <strong>semicolon&nbsp;</strong> <strong>';'</strong><br><span role="presentation" dir="ltr" class="" style="background-color: rgb(255, 207, 53);">fscanf( file, ”</span><span role="presentation" dir="ltr"><span class="" style="background-color: rgb(255, 207, 53);">%<strong>[</strong></span><strong><span><span class="" style="background-color: rgb(255, 207, 53);">^;</span></span></strong><span class="" style="background-color: rgb(255, 207, 53);"><strong>]</strong><strong>;</strong> %<strong>[</strong></span><strong><span><span class="" style="background-color: rgb(255, 207, 53);">^;</span></span></strong><span class="" style="background-color: rgb(255, 207, 53);"><strong>];</strong> %d</span></span><span role="presentation" dir="ltr" class="" style="background-color: rgb(255, 207, 53);">” , student_array[ i ].<strong>surname</strong>, </span><span role="presentation" dir="ltr" class="" style="background-color: rgb(255, 207, 53);">student_array[ i ].<strong>name</strong>, &amp;(student_array[ i ].<strong>age</strong>) );</span><br></div>
+    <div><br></div>
+    <div>The description of special formating string&nbsp; <strong><span class="" style="background-color: rgb(255, 207, 53);">"</span><span><span class="" style="background-color: rgb(255, 207, 53);">%[^characters]</span></span><span class="" style="background-color: rgb(255, 207, 53);">"</span></strong><br>can be found in <a href="https://www.cplusplus.com/reference/cstdio/scanf/">scanf documentation</a>.</div>
+</div>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<span style="font-style: italic">
+<a href="../[ITP] LABORATORY Introduction to Programming 2024.html">Return to the main description</a>
+  of the entire laboratory
+</span>
+
+</body></html>

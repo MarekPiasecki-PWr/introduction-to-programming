@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr" lang="en">
+
+<head>
+<meta content="text/html; charset=ISO-8859-2" http-equiv="content-type">
+<meta content="Marek Piasecki" name="author">
+<title>[ITP] ARCHIVES - Introduction to Programming 2024 - LABORATORY</title>
+</head>
+
+<body>
+<span style="font-style: italic">
+<span style="font-weight: bold; color: red;">ARCHIVES '2024: &nbsp;&nbsp;</span> 
+
+"Introduction to Programming" &nbsp;LABORATORY - <a href="https://wefim.pwr.edu.pl/en/">Faculty of Electronics, Photonics and Microsystems</a>&nbsp;
+-&nbsp; Electronic and Computer Engineering&nbsp; (ECE)
+</span>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h1 style="font-family: Arial;">LABORATORY <u style="background-color: yellow;">&nbsp;L6&nbsp;</u> : C-arrays + array algorithms (part II)</h2>
+
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Introductory description:</span>
+</div>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<p dir="ltr" style="text-align: left;">Basic <strong>array processing algorithms</strong> (fill, compare items, search,
+    move items, delete, add/insert, . . . ).</p>
+<span class="" style="color: rgb(152, 202, 62);">Materials for laboratory self preparation:</span>
+<ul>
+    <li>W3schools tutorials - <a href="https://www.w3resource.com/c-programming-exercises/array/">C Array exercises with solution</a><br></li>
+    <li>W3schools - Array exercise (6) - <a href="https://www.w3resource.com/c-programming-exercises/array/c-array-exercise-6.php"><strong>Print all unique elements of an array</strong></a></li>
+</ul>
+
+<hr>
+<p dir="ltr"><strong>Note: </strong>As a possible improvement, the <strong>currently used</strong> number of
+    elements of array (<em>logical size</em>), could be different/smaller than real size <strong>N</strong>. Usually it can be represented by additional variable <strong>n</strong>.<br>In this case, there are two sizes:<br>1) physical/maximal size <strong>N</strong><span>&nbsp; <em><span class="" style="color: rgb(152, 202, 62);">(constant)</span></em></span><br>2) logical/used size <strong>n</strong><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em><span class="" style="color: rgb(152, 202, 62);">(variable)</span></em></span><br><br><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp; const int </span><strong><span class="" style="background-color: rgb(152, 202, 62);">N=100</span></strong><span class="" style="background-color: rgb(152, 202, 62);">;&nbsp;&nbsp;</span>&nbsp; <span class="" style="color: rgb(152, 202, 62);">// </span><em><span class="" style="color: rgb(152, 202, 62);">maximal capacity</span></em><br><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;</span><strong><span class="" style="background-color: rgb(152, 202, 62);"> double array[N]</span></strong><span class="" style="background-color: rgb(152, 202, 62);">;&nbsp;</span>&nbsp; <span class="" style="color: rgb(152, 202, 62);">//</span><em><span class="" style="color: rgb(152, 202, 62);"> fixed-size array</span></em><br><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp; int </span><strong><span class="" style="background-color: rgb(152, 202, 62);">n=0</span></strong><span class="" style="background-color: rgb(152, 202, 62);">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp; <span class="" style="color: rgb(152, 202, 62);">//</span><em><span class="" style="color: rgb(152, 202, 62);"> currently used "logical" size</span></em></p>In all tasks of Laboratory_6, please use such quasi-dynamic array with additional <em>"logical"</em> size.<br> (Wiki: <a href="https://en.wikipedia.org/wiki/Dynamic_array#Bounded-size_dynamic_arrays_and_capacity">Bounded-size dynamic arrays</a>),<br>
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L6.T1</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task to be performed:</span>
+</div>
+<br>
+<div style="margin-left: 40px;font-family: Arial;">
+
+Write a program that fills n-elemental array with
+<strong>random</strong>
+integers from range [ <strong>min</strong>, <strong>max</strong> ],<br><em><span class="" style="color: rgb(152, 202, 62);">(where:&nbsp; <span><strong>n</strong>, </span><strong>min</strong>&nbsp; and&nbsp; <strong>max</strong>&nbsp; values ​​are read from the computer keyboard)</span></em><br>and then checks:<br><br>
+<div><strong>a)</strong> if all numbers are arranged in <strong>ascending order</strong>&nbsp; ( i.e.&nbsp; arr[0] &lt; arr[1] &lt; arr[2] &lt; . . .&nbsp; )<br><br></div>
+<div><strong>b)</strong> whether there is <strong>at least one repeated</strong> value (any repetition:&nbsp; <strong><span class="" style="background-color: rgb(152, 202, 62);">2</span></strong>, 3, 5, <strong><span class="" style="background-color: rgb(152, 202, 62);">2</span></strong>, -7, . . . )<br><br>
+</div>
+<hr>
+<div>The <a href="https://www.cplusplus.com/reference/cstdlib/rand/">rand()</a> function, from library &lt;stdlib.h&gt;, can be used to generate random numbers.<br><br>Functions&nbsp; <a href="https://www.cplusplus.com/reference/cstdlib/srand/">srand()</a> and <a href="https://www.cplusplus.com/reference/ctime/time/">time()</a>&nbsp;&nbsp; <br>(<em>the second is from library </em>&lt;time.h&gt;),<br>can be used to initialise random pseudo-generator.</div>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L6.T2</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task:</span>
+</div>
+<br>
+<div style="margin-left: 40px;font-family: Arial;">
+
+<div id="intro">
+    <div>Write a program which:<br><strong>a)</strong> first will load the data (from keyboard) to n-element array of short integers,<br><strong>b)</strong> and then, will allow to check (search the array) if the <strong>array</strong> contains the <strong>value</strong> specified by user.<br>&nbsp;<br>Many <a href="https://www.geeksforgeeks.org/searching-algorithms/"><strong>Searching Algorithms</strong></a> can be used to solve this class of problems.<br> The simpliest is&nbsp; "<a href="https://en.wikipedia.org/wiki/Linear_search">Linear
+            Search</a>" and the most popular is "<a href="http://en.wikipedia.org/wiki/Binary_search_algorithm">Binary
+            Search</a>".<br>Note, that "LinearSearch" is easier to implement and easier to understand, but much less effective</span></span></span> than "BinarySearch".<br></div>
+</div>
+<div><br></div>
+<div>(<strong><span class="" style="color: rgb(239, 69, 64);">*</span></strong>) <em><span class="" style="color: rgb(152, 202, 62);">As
+            an additional extension/improvement, this searching algorithm can be
+            implemented as a sub-program (separate function), which will get: the </span><strong><span class="" style="color: rgb(152, 202, 62);">array A</span></strong><span class="" style="color: rgb(152, 202, 62);">, its </span><strong><span class="" style="color: rgb(152, 202, 62);">size</span></strong><span class="" style="color: rgb(152, 202, 62);"> and the </span><strong><span class="" style="color: rgb(152, 202, 62);">value</span></strong><span class="" style="color: rgb(152, 202, 62);"> searched for, as arguments to this function.</span></em><br>For example:<br><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp; int </span><strong><span class="" style="background-color: rgb(152, 202, 62);">SearchArrayForValue</span></strong><span class="" style="background-color: rgb(152, 202, 62);">(short int A[], int size, int value) </span><br><span class="" style="background-color: rgb(152, 202, 62);">&nbsp; &nbsp; {</span></div>
+<div><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int position=-1;</span><br><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . . .</span><br><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; . . .</span><br><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return position;</span><br></div>
+<div><span class="" style="background-color: rgb(152, 202, 62);">&nbsp; &nbsp; }&nbsp; </span><br></div>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK *<u>L6.EXTRA</u> (optional)</h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task:</span>
+</div>
+<br>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<div>Use<span lang="en"><span title=""> console 2D semigraphics, to implement the prototype of a <strong>PAC-MAN</strong> game:</span><br></span></div>
+<br>
+<div><img src="img-L06\PacMan.jpg" alt="PacMan" width="200" height="188" class="img-fluid atto_image_button_text-bottom"><br><br></div>
+<div>
+    <div>At this phase of the semester, it is expected that you should be able to:</div>
+    <div>
+        <ul>
+            <li>use <strong>2-dimensional array</strong>, to model a "<strong>map</strong>" with free corridors and obstacles,</li>
+            <li>use <strong>getch()</strong> function to implement control of <strong>PacMan movement</strong>,</li>
+            <li>use <strong>loop</strong>(s) to: repeatedely r<strong>efresh</strong>/display the "map" and current position of the PacMan / Ghosts.</li>
+        </ul>
+        <div>Good luck :-)<br></div><span lang="en"></span>
+    </div>
+    <div><br></div>
+    <div><strong>Hint:</strong></div>
+    <div><span lang="en"><span title="">You can use an <strong><a href="https://github.com/juebrauer/teaching_programming1/blob/master/PacMan/PacMan.c">ExampleCode1</a></strong> , <strong><a href="https://github.com/YoctoForBeaglebone/pacman4console/blob/master/pacman.c">ExampleCode2</a></strong> to get some inspiration,<br></span></span>
+        <div><span lang="en"><span title="">but please do not copy it directly.</span></span></div>
+    </div>
+</div>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<span style="font-style: italic">
+<a href="../[ITP] LABORATORY Introduction to Programming 2024.html">Return to the main description</a>
+  of the entire laboratory
+</span>
+
+</body></html>

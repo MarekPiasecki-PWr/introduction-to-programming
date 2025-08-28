@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr" lang="en">
+
+<head>
+<meta content="text/html; charset=ISO-8859-2" http-equiv="content-type">
+<meta content="Marek Piasecki" name="author">
+<title>[ITP] ARCHIVES - Introduction to Programming 2024 - LABORATORY</title>
+</head>
+
+<body>
+<span style="font-style: italic">
+<span style="font-weight: bold; color: red;">ARCHIVES '2024: &nbsp;&nbsp;</span> 
+
+"Introduction to Programming" &nbsp;LABORATORY - <a href="https://wefim.pwr.edu.pl/en/">Faculty of Electronics, Photonics and Microsystems</a>&nbsp;
+-&nbsp; Electronic and Computer Engineering&nbsp; (ECE)
+</span>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h1 style="font-family: Arial;">LABORATORY <u style="background-color: yellow;">&nbsp;L9&nbsp;</u> : C-string, basics of text processing in C</h2>
+
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Selected materials for self-studying and laboratory preparation:</span>
+</div>
+<br>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<div><strong>Using existing functions</strong>: <em>( from library &lt;string.h&gt; )</em></div>
+<div>
+    <ul>
+        <li><a href="https://www.w3schools.com/c/c_strings_functions.php">w3schools - C String Functions</a></li>
+        <li><a href="https://beginnersbook.com/2014/01/c-strings-string-functions/">C – Strings and String functions with examples</a><br></li>
+    </ul>
+</div><strong>Creating new / user defined / custom functions</strong> <em>(utilising C-string representation)</em>
+<div>
+    <ul>
+        <li><a href="https://www.includehelp.com/c-programs/c-programs-string-user-defined-functions.aspx">String User Defined Function Examples/Programs<br></a>&nbsp;&nbsp; <br></li>
+    </ul>
+
+    <strong><span class="" style="color: rgb(152, 202, 62);">Lecture materials:</span></strong>
+</div>
+<div>
+    <ul>
+        <li>Slides:&nbsp;&nbsp;<strong> </strong><span><a href="../Lecture-Slides/2024_L07_C_strings.pdf">L07 C-strings</a></span></li>
+        <li>Additional examples: <a href="../Lecture-Slides/2024_L08_Examples_of_text-processing_functions.pdf">Writing custom functions performing C-string text processing</a><br></li>
+    </ul>
+
+</div>
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L9.T1</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task to be performed:</span>
+</div>
+<br>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<div>
+    <div><strong><span class="" style="color: rgb(239, 69, 64);">1.A)</span></strong> First, please&nbsp;<span class="" style="background-color: rgb(152, 202, 62);"> analyse&nbsp;</span> standard <strong><a href="https://en.cppreference.com/w/c/string/byte">null-terminated
+                text processing</a></strong> functions from <strong>&lt;string.h&gt;</strong> library.<br>Pay special attention to functions from the categories:</div>
+
+    <div>
+        <ul>
+            <li>string <strong>manipulation</strong>&nbsp; (e.g. strcpy, strcat )</li>
+            <li>string <strong>examination</strong> (e.g. strlen, strcmp, strchr, strstr, strtok ) <br></li>
+        </ul>
+        Example programs, illustrating how to use existing functions can be found&nbsp; <a href="https://beginnersbook.com/2014/01/c-strings-string-functions/"><strong>here <br></strong></a>
+    </div>
+    <div><br>
+    </div>
+
+    <div><span class="" style="background-color: rgb(152, 202, 62);"><span style="background-color: rgb(255, 255, 255);"><strong><span class="" style="color: rgb(239, 69, 64);">1.B)</span></strong> Then,&nbsp;</span> create and test&nbsp;</span> your <strong>own implementations</strong>: <strong><u><span class="" style="color: rgb(152, 202, 62);">my_strlen</span></u>, <u><span class="" style="color: rgb(152, 202, 62);">my_strchr</span></u>,</strong><span> of </span>standard <a href="https://en.cppreference.com/w/c/string/byte/strlen"><strong>strlen</strong></a> and <a href="https://en.cppreference.com/w/c/string/byte/strchr"><strong>strchr</strong></a> functions.<br>Examples and hints, how create custom/user defined functions, can be found <strong><a href="https://www.includehelp.com/c-programs/c-programs-string-user-defined-functions.aspx">here</a></strong><br></div>
+</div>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L9.T2</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task:</span>
+</div>
+<br>
+<div style="margin-left: 40px;font-family: Arial;">
+
+<div id="intro">
+    <div>
+        <div>Composing advanced <strong>user-defined functions</strong>
+            for
+            character string processing (for individual, more unique cases).<br>
+            <strong><br></strong><span><span><span>a) Review the concept and make sure, that you have a <strong>good understanding</strong> of how the predefined functions: <u><a href="https://en.cppreference.com/w/c/string/byte/strcmp"><strong>strcmp</strong></a></u> and <u><a href="https://en.cppreference.com/w/c/string/byte/strncmp"><strong>strncmp</strong></a></u> work.</span></span></span>
+        </div>
+        <div><span><span><span><br></span></span></span></div>
+        <div><span><span><span>b) Create your own implementation of the new/unique function:</span></span></span><strong><br></strong>&nbsp;&nbsp;&nbsp; int <strong>str<span class="" style="background-color: rgb(255, 207, 53);">c</span>cmp</strong><strong></strong>(const char*<strong> text1</strong>, const char* <strong>text2</strong>, char <strong>delimiter</strong> ) <br></div>
+        <div>which compares two input texts (text1 and text2) until null-termination '\0' or a specified "delimiter" character.</div>
+        <div><br></div>
+        <div>Example call:<br>&nbsp;&nbsp;&nbsp; int result = <strong>strccmp</strong><strong></strong>( "Abc=def" , "Abc=123" , '=' );<br>should result with returning a <strong>zero</strong> value (which means "zero/no difference" ) </div>
+    </div>
+</div>
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK *<u>L9.EXTRA</u> (optional)</h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task:</span>
+</div>
+<br>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+Implement and test, the text processing function (analogous to <strong>strupr</strong>/<strong>strlwr</strong>)<br>&nbsp;&nbsp;<span class="" style="background-color: rgb(255, 207, 53);"> char* str</span><strong><span class="" style="background-color: rgb(255, 207, 53);">cpt</span></strong><span class="" style="background-color: rgb(255, 207, 53);">( char* text );</span><br>
+<div>which converts the input text into "<strong>c</strong>a<strong>p</strong>i<strong>t</strong>alized"&nbsp; (see: Wiki: <a href="https://en.wikipedia.org/wiki/Capitalization">Capitalization</a>).<br>Depending on the language, the rules for capitalization are very complicated.<br>In this task, the most simplified rule can be used, that every word should start with uppercase,<br>and all subsequent letters should be lowercase.<br></div>
+<div><br></div>
+<div>Example: <strong>"wElcoME in WROclaw!"</strong><br>should be converted into: <strong>"Welcome In Wroclaw!"</strong></div>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<span style="font-style: italic">
+<a href="../[ITP] LABORATORY Introduction to Programming 2024.html">Return to the main description</a>
+  of the entire laboratory
+</span>
+
+</body></html>

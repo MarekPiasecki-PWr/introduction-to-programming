@@ -1,0 +1,641 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr" lang="en"><head>
+
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="content-type">
+<meta content="Marek Piasecki" name="author"><title>[ITP] Introduction to Programming 2024</title></head><body>
+<a href="http://pwr.edu.pl/en/">Wroclaw University of
+Technology</a>
+&nbsp;- &nbsp;&nbsp;<a href="https://wefim.pwr.edu.pl/en/">Faculty of Electronics, Photonics and Microsystems</a>&nbsp;
+-&nbsp; Electronic and Computer Engineering&nbsp; (ECE)
+<hr style="width: 100%; height: 2px;">
+
+
+<h2 style="font-family: Arial;"><span style="font-weight: bold;"><span style="color: red;">ARCHIVES: &nbsp;</span><span style="color: rgb(153, 153, 153);">"Introduction To Programming"</span><br style="color: rgb(153, 153, 153);"><span style="color: rgb(153, 153, 153);">
+&nbsp; ECEA 00002 &nbsp;COURSE / </span> <span style="color: red;"> LECTURE&nbsp;&nbsp;'2024/25</span><br>
+</span></h2>
+<table style="text-align: left; width: 550px;" border="1" cellpadding="2" cellspacing="0">
+<tbody>
+<tr style="font-family: Arial;" align="left">
+<td colspan="4" rowspan="1"> <span style="font-weight: bold;">Lecturer:</span>&nbsp; <a href="https://web.usos.pwr.edu.pl/kontroler.php?_action=katalog2%2Fosoby%2FpokazOsobe&os_id=1318&lang=en">Marek
+Piasecki</a>, PhD<br>
+</td>
+</tr>
+<tr>
+<td style="text-align: right; font-family: Arial; background-color: rgb(204, 204, 204); width: 180px;">&nbsp;</td>
+<td style="text-align: center; font-weight: bold; font-family: Arial; width: 160px;">Lecture</td>
+<td style="text-align: center; font-weight: bold; font-family: Arial; width: 160px;"><a href="%5BITP%5D%20LABORATORY%20Introduction%20to%20Programming%202024.html">Laboratory</a></td>
+</tr>
+<tr>
+<td style="text-align: right; font-weight: bold; font-family: Arial;">Hours
+/ sem.
+(h) :</td>
+<td style="text-align: center; font-family: Arial;">30</td>
+<td style="text-align: center; font-family: Arial;">45</td>
+</tr>
+<tr>
+<td style="text-align: right; font-weight: bold; font-family: Arial;">ECTS
+:</td>
+<td style="text-align: center; font-family: Arial;">8<br>
+</td>
+<td style="text-align: center; font-family: Arial;">-</td>
+</tr>
+</tbody>
+</table>
+
+<br>
+<!-- ################################################################# -->
+
+
+<h2 style="text-decoration: underline; font-family: Arial;">GENERAL - Course information</h2>
+<div style="font-family: Arial;">
+    Course: &nbsp;<strong>"Introduction to Programming"&nbsp; LECTURE</strong>
+    <br>
+    Place:&nbsp; <strong>Lecture hall 40/C-4</strong>
+    <br>
+    Time:&nbsp; <strong>every Wednesday 18:55-20:35</strong>
+    <br>
+    Teacher: &nbsp;<strong>dr Marek Piasecki</strong>
+    <br>
+    Contact: &nbsp;<strong>marek.piasecki@pwr.edu.pl</strong>
+    <br>
+
+    <a href="https://web.usos.pwr.edu.pl/kontroler.php?_action=katalog2/osoby/pokazOsobe&amp;os_id=1318"></a><span style="color: rgb(125, 159, 211);"></span>
+</div>
+
+<br>
+<!-- ################################################################# -->
+
+<h3 style="font-family: Arial;">Equal rights / Special needs:</h3>
+<div style="font-family: Arial;">
+<div style="text-align: left;">
+
+
+</div>
+<div style="margin-left: 40px;">
+<div style="text-align: left;">
+</div>
+<table border="1" cellpadding="10" cellspacing="0">
+            <tbody>
+                <tr>
+                    <th style="text-align: left; font-weight: normal;">
+Dear Students, 
+<br>
+those who, due to their <span style="font-weight: bold;">health condition</span>, <span style="font-weight: bold;">disability</span> or <span style="font-weight: bold;">other objective reasons</span>, 
+<br>
+may have special needs related to classes leading,
+<br>
+crediting method or materials preparation
+<br>
+<br">
+are asked to report for consultations<br>
+or after the classes write such information in a private chat
+<br>
+or write an e-mail about the matter.
+<br>
+<br>
+I will try to ensure that during my classes everyone has an equal right 
+<br>
+to gain knowledge and its crediting.
+
+                    </br"></th>
+                </tr>
+
+            </tbody>
+</table>
+
+</div>
+
+
+</div>
+
+<!-- ################################################################# -->
+<br>
+<h3 style="font-family: Arial;">Can student use genAI ?</h3>
+<div style="font-family: Arial;">
+<ul dir="ltr">
+    <li><strong><span style="background-color: rgb(255, 207, 53);">PWr</span></strong> (PL) -&gt; Official <a href="https://di.pwr.edu.pl/oprogramowanie/ai/zalecenia-korzystania-z-narzedzi-ai">7 recommendations for people studying</a> at the Wrocław University of Technology<br><br>
+        <table border="1" cellpadding="10" cellspacing="0">
+
+            <tbody>
+                <tr>
+                    <th scope="col">
+                        <div>&nbsp; &nbsp;&nbsp; . . . <br></div>
+                        <div>2) <strong>Clearly mark any fragments of your work<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; that have been created with AI tools.</strong><strong><br></strong></div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp; . . .<br></div>
+                    </th>
+                </tr>
+            
+            </tbody>
+        </table>
+        <br>
+    </li>
+    <li><strong><span style="background-color: rgb(255, 207, 53);">CLion</span></strong> -&gt; MENU -&gt; File -&gt; Settings -&gt; Editor -&gt; <strong><a href="https://www.jetbrains.com/help/clion/full-line-code-completion.html">Inline Completion</a></strong>&nbsp; (<em><span>full line code completion</span>, by AI</em> )<br><strong>CLion</strong> -&gt; MENU -&gt; File -&gt; Settings -&gt; Plugins -&gt; <strong><a href="https://www.jetbrains.com/help/clion/ai-assistant.html">AI Assistant<br></a>&nbsp; &nbsp;</strong></li>
+	<li>
+<span><span style="background-color: rgb(255, 207, 53);">Recommendation</span> for beginner programmers (especially during laboratory classes):</span>
+<h4><strong>choose wisely &gt;&gt; do not abandon your natural intelligence!</strong>
+<br>
+<strong><a href="https://www.jetbrains.com/help/idea/disable-ai-assistant.html">.noai</a></strong><br></h4>
+
+	</li>
+
+</ul>
+
+
+</div>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="text-decoration: underline; font-family: Arial;">Materials for the lecture and evaluation<br>
+</h2>
+<div style="font-family: Arial;">
+
+
+<ul>
+    <li><span lang="en"><span title="">Materials
+                for the course&nbsp; (e.g. presented slides, examples, links to
+                documentation, etc.) will be posted in the sections below, and on the course website <em>(accesible from the outside the University via <a href="https://di.pwr.edu.pl/uslugi/siec/vpn/globalprotect-vpn-for-students">student VPN</a>)</em>:<br><strong>LECTURE: </strong><a href="http://marek.piasecki.staff.iiar.pwr.wroc.pl/dydaktyka/itp/" target="_blank">http://marek.piasecki.staff.iiar.pwr.wroc.pl/dydaktyka/itp/</a><br><span lang="en"><span title=""><strong>LABORATORY: </strong><a href="http://marek.piasecki.staff.iiar.pwr.wroc.pl/dydaktyka/itp/laboratory.html" target="_blank">http://marek.piasecki.staff.iiar.pwr.wroc.pl/dydaktyka/itp/laboratory.html</a></span></span></span></span><span lang="en"><span title=""><br>&nbsp;&nbsp;&nbsp;</span></span></li>
+
+    <li><span lang="en"><span title=""><a href="https://web.usos.pwr.edu.pl/kontroler.php?_action=katalog2%2Fprzedmioty%2FpokazPrzedmiot&kod=W12EAC-SI0002G&lang=en">W12EAC-SI0002G</a> Subject Card<br>&nbsp;&nbsp; </span></span></li>
+
+    <li><span lang="en"><span title="">Evaluation:<br>- <strong><span style="color: rgb(51, 51, 51);">Midterm</span></strong><span style="color: rgb(51, 51, 51);"> / forming exam (stationary, written on the paper) is scheduled for:&nbsp; </span><strong><span style="color: rgb(51, 51, 51);">November 27, 2024</span></strong><br>&nbsp;&nbsp; <br>- <strong>Final exam</strong> is scheduled for:&nbsp; <strong><span style="color: rgb(239, 69, 64);">January 29, 2025</span></strong><strong>, room 110/C2, time: 17:05-18:45<br>&nbsp;&nbsp;<span style="background-color: rgb(255, 255, 255);"> </span></strong><span><a href="Lecture-Slides/2024_L13_Repetition.pdf"><span style="background-color: rgb(255, 255, 255);">example tasks &amp; repetition materials&nbsp;</span></a></span><strong><span style="background-color: rgb(255, 255, 255);">&nbsp; </span></strong><span><em><span style="color: rgb(152, 202, 62);">(related to the second
+                            part of the semester and final exam)</span></em></span><strong><br><br><span lang="en"><span title="">- Retake<strong> exam</strong> </span></span></strong><span lang="en"><span title=""><span lang="en"><span title="">is planned for:&nbsp;</span></span></span></span><strong><span lang="en"><span title=""> </span></span></strong><strong><span lang="en"><span title=""><span style="color: rgb(239, 69, 64);">February 6, 2025</span>, room 23/C3, time: 16:00-17:00<br>&nbsp; </span></span></strong><em><span><span lang="en"><span title="" style="color: rgb(152, 202, 62);">(for students who fail or were absent / during midterm and/or final exam)</span></span></span><strong><span lang="en"><span title=""><br></span></span></strong></em></span></span></li>
+</ul>
+
+<div style="margin-left: 40px;"><br>
+
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tbody>
+            <tr>
+                <td>RECOMMENDED
+                    free eBook / Wikibooks (in English,
+                    Polish and some other languages):<br>
+                    &nbsp; -&nbsp;<a target="_blank" href="https://en.wikibooks.org/wiki/C_Programming">C programming [EN]</a> &nbsp; &nbsp;or&nbsp; <a href="https://pl.wikibooks.org/wiki/C" target="_blank">Język C [PL]</a>&nbsp;
+                    &nbsp; &nbsp; &nbsp; ( &nbsp;&nbsp;C
+                    &nbsp; <a href="https://upload.wikimedia.org/wikipedia/commons/0/07/C_Programming.pdf">PDF</a>
+                    )
+                    <br>
+                    &nbsp; - <a target="_blank" href="https://en.wikibooks.org/wiki/C%2B%2B_Programming">C++
+                        programming [EN]</a> &nbsp; or &nbsp;<a target="_blank" href="https://pl.wikibooks.org/wiki/C%2B%2B">Język C++
+                        [PL]</a>&nbsp; &nbsp;( C++ <a href="https://upload.wikimedia.org/wikipedia/commons/e/e9/CPlusPlusProgramming.pdf">PDF</a>
+                    )&nbsp;<br>
+                    &nbsp; <br>
+                    - W3schools &nbsp;"<a href="https://www.w3schools.com/c/index.php">C Tutorial</a>" &nbsp;( + examples + "Try it yourself" )
+                    &nbsp;<br>
+                    - W3schools &nbsp;"<a href="https://www.w3schools.com/cpp/default.asp">C++ Tutorial</a>"
+                    &nbsp;( + examples + "Try it
+                    yourself" ) &nbsp;<br>
+                    &nbsp;&nbsp;<br>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    &nbsp;&nbsp;<br>
+</div>
+
+
+
+
+</div>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="text-decoration: underline; font-family: Arial;">LECTURE-01</h2>
+
+<div style="margin-left: 40px; font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Content:</span>
+The <strong>algorithms</strong> and methods
+for their representation.
+The <strong>flowcharts</strong>.<br>
+The stages and <strong>tools</strong> used during
+software development. <strong>Standards</strong> of
+programming languages.<br>
+The overall structure, syntax and
+semantics of the program in <strong>C or C++</strong>.
+<strong>Examples of source code</strong> for simple console applications.<br>
+Computer
+data and their representations.<strong> Data types</strong> and ranges of values.
+Program variables, <strong>variable</strong> declaration and initialization. The
+visibility of identifiers. Storage classes. Predefined scalar types and
+user defined types (typedef). Logic, bitwise and arithmetic <strong>operators</strong>.
+Rules for calculation of algebraic expressions.<br><br>
+<span style="color: rgb(152, 202, 62);">Slides:</span>&nbsp;&nbsp;<strong><a href="Lecture-Slides/2024_L01_Introduction.pdf">L01 -Introduction (PDF)</a></strong><a href="http://marek.piasecki.staff.iiar.pwr.wroc.pl/dydaktyka/itp/2023_L01_Introduction.pdf"><br>
+</a><br>
+<span style="color: rgb(152, 202, 62);">Wiki:</span> &nbsp;&nbsp;&nbsp;<a href="https://en.wikipedia.org/wiki/Programming_paradigm">programming
+    paradigms</a> ,
+&nbsp;<a href="https://en.wikipedia.org/wiki/Comparison_of_programming_languages">comparison
+    of programming languages</a>
+, &nbsp;<a href="https://en.wikipedia.org/wiki/C_%28programming_language%29">
+    C&nbsp;</a>
+&nbsp;/ &nbsp;<a href="https://en.wikipedia.org/wiki/C%2B%2B">C++</a>
+&nbsp;standards<br>
+&nbsp;&nbsp; <br>
+<span style="color: rgb(152, 202, 62);">Other resources:</span> <br>
+&nbsp; - MIT Open course <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-096-introduction-to-c-january-iap-2011/lecture-notes/">"Introduction
+    to C++"</a>: Lecture 1 notes "<a href="https://ocw.mit.edu/courses/6-096-introduction-to-c-january-iap-2011/resources/mit6_096iap11_lec01/">1.&nbsp;Introduction</a>"
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="text-decoration: underline; font-family: Arial;">LECTURE-02</h2>
+
+<div style="margin-left: 40px; font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Content:</span>
+Dialogue with the user in <strong>text
+    mode</strong>. <strong>Formatted input and
+    output</strong> using standard library <strong>&lt;stdio.h&gt;</strong>.<br>
+Basic
+<strong>programming instructions</strong>: assignment, conditional selection and choice.
+Controlling the flow of the algorithm, folding and nesting conditional
+instructions. Examples of algorithms that process small amounts of
+data. The standard
+<strong>mathematical functions</strong>. Dealing with streams and basic input/output
+operations.&nbsp;&nbsp;. <br>
+
+<br><span style="color: rgb(152, 202, 62);">Slides:</span>&nbsp; <strong><a href="Lecture-Slides/2024_L02_stdio_if_else_switch.pdf">L02- Input/Output, if/else, switch (PDF)</a></strong>&nbsp;&nbsp;<br>
+
+Online <a target="_blank" href="http://www.cplusplus.com/reference/cstdio/printf/">printf</a>
+and <a href="http://www.cplusplus.com/reference/cstdio/scanf/" target="_blank">scanf</a> documentation&nbsp;
+(from &nbsp;<a href="http://www.cplusplus.com/">www.cplusplus.com</a>
+&nbsp;portal)<br>
+<br>
+<span style="color: rgb(152, 202, 62);">Other resources:</span><br>
+&nbsp; - C programming / <a href="https://en.wikibooks.org/wiki/C_Programming/Program_flow_control">Program
+    flow control</a><br>
+&nbsp; - MIT "Introduction to
+C++": Lecture 2 notes "<a href="https://ocw.mit.edu/courses/6-096-introduction-to-c-january-iap-2011/resources/mit6_096iap11_lec02/">2.
+    Flow of control</a>"<br>
+&nbsp; - Exercises: w3resource - <a href="https://www.w3resource.com/cpp-exercises/basic/index.php">C++
+    Basics</a> (85 exercises with
+solution)&nbsp; &nbsp; &nbsp;<br>&nbsp;&nbsp; <br>
+<span style="color: rgb(152, 202, 62);">Supplementary readings:</span><br>
+&nbsp;- Wikipedia&nbsp;→ <a href="https://en.wikipedia.org/wiki/Structured_programming">Structured Programming</a> <br>
+- C Programming / Program flow control&nbsp;→&nbsp; "<a href="https://en.wikibooks.org/wiki/C_Programming/Program_flow_control#One_last_thing:_goto">Last
+    thing: goto</a>" <br>
+&nbsp; &nbsp;<em>(illustration of :&nbsp; what programming would look like, without structured if-else statements and loop statements)</em>
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="text-decoration: underline; font-family: Arial;">LECTURE-03</h2>
+
+<div style="margin-left: 40px; font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Content:</span>
+The concept of <strong>iterations</strong> in
+the program.
+<br>
+The <strong>types of loops</strong>: while, do-while, for. Terms of sequencing and <strong>nesting</strong> the loops. Instructions to <strong>break</strong> or <strong>continue</strong> the
+loop. 
+<br>
+Simple <strong>iterative algorithms</strong>: counting, searching the minimum or
+maximum, summing up the data values retrieved from the stream.<br>
+<br><span style="color: rgb(152, 202, 62);">Slides:</span>&nbsp; <strong><a href="Lecture-Slides/2024_L03_Loops.pdf">L03 - Loops(PDF)</a></strong><br>
+<br>
+<span style="color: rgb(152, 202, 62);">Other resources:</span><br>&nbsp; - GeeksForGeeks notes: <a href="https://www.geeksforgeeks.org/loops-programming/">Loops in Programming</a><br>
+&nbsp;
+- Exercises: w3resource - <a href="https://www.w3resource.com/cpp-exercises/for-loop/index.php">C++&nbsp;Loops</a>
+(87 exercises with
+solution)<br>
+&nbsp; - Hints/documentation
+for more advanced/color text console printing:&nbsp; <a target="_blank" href="http://www.cplusplus.com/forum/beginner/52844/">console
+    color</a>,&nbsp; <a target="_blank" href="http://www.cplusplus.com/forum/beginner/28859/">gotoxy</a>,&nbsp;
+<a href="http://www.cplusplus.com/articles/4z18T05o/" target="_blank">clrscr</a>
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="text-decoration: underline; font-family: Arial;">LECTURE-04</h2>
+
+<div style="margin-left: 40px; font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Content:</span>
+<strong>Arrays
+    in C/C++.</strong> Array declaring, defining and indexing. Processing array data
+using a loop. One-dimensional and multi-dimensional arrays.<br><br>
+<span style="color: rgb(152, 202, 62);">Slides:</span>&nbsp; <a href="Lecture-Slides/2024_L04_Arrays.pdf"><strong>L04 - Arrays(PDF)</strong></a><br>
+<br>
+<span style="color: rgb(152, 202, 62);">Other resources:</span><br>
+&nbsp;
+- wikiBook: <a href="https://en.wikibooks.org/wiki/C_Programming/Arrays_and_strings">C
+    Programming / Arrays</a><br>
+&nbsp; - GeeksforGeeks <a href="https://www.geeksforgeeks.org/c-arrays/?ref=shm">C Arrays</a><br>
+&nbsp; - example algorithms:&nbsp; <a href="https://www.geeksforgeeks.org/c-program-to-insert-an-element-in-an-array/">inserting
+    new value</a> into array, deleting / <a href="https://www.geeksforgeeks.org/c-program-to-remove-all-occurrences-of-an-element-in-an-array/">removing
+    some value</a> from array<br>
+&nbsp; - MIT course -
+Lecture 4 notes: <a href="https://ocw.mit.edu/courses/6-096-introduction-to-c-january-iap-2011/33183276121549190ef4f8017b06b1b6_MIT6_096IAP11_lec04.pdf">Arrays
+    and Strings</a><br>
+&nbsp; - Exercises: w3resource - <a href="https://www.w3resource.com/cpp-exercises/array/index.php">C++
+    Array</a> (29&nbsp; exercises
+with solution in C++)<br>
+<br>
+
+<table border="1" cellpadding="6" cellspacing="1">
+    <tbody>
+        <tr>
+            <td>For more
+                advanced students:<br>
+                <em><span style="color: rgb(152, 202, 62);">Something to read and think over:</span></em><span style="color: rgb(152, 202, 62);"> </span><a href="https://stackoverflow.com/questions/1887097/why-arent-variable-length-arrays-part-of-the-c-standard">Why
+                    aren't &nbsp;"variable-length"&nbsp; arrays part of the C++ standard?</a>, <br>
+                <em><span style="color: rgb(152, 202, 62);">i.e. discussion, why there are problems with&nbsp;VLA (Variable Lenght Array) which was introduced /
+                        allowed in C language version&nbsp;C99:
+                    </span></em><span style="background-color: rgb(255, 207, 53);"><br>&nbsp;&nbsp;<strong>int&nbsp;
+my_size; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</strong></span><strong><br></strong><span style="background-color: rgb(255, 207, 53);"><strong>
+                        &nbsp; &nbsp;double&nbsp; my_array[ my_size ];&nbsp; </strong></span><br>
+                <em><span style="color: rgb(152, 202, 62);">especially, when somebody
+                        try to modify the variable "my_size" later:</span><br><span style="color: rgb(152, 202, 62);">
+                        i.e..&nbsp;</span></em> <strong>scanf("%d",
+                    &amp;my_size);</strong>
+                &nbsp; &nbsp;<span style="color: rgb(152, 202, 62);"> or </span>&nbsp;
+                &nbsp; <strong>my_size = my_size+1;</strong><br>
+                <br>
+                <em>+ article&nbsp;</em> <a href="https://nullprogram.com/blog/2019/10/27/">"Legitimate
+                    Use of Variable Length Arrays"</a> <em>by Chris Wellons <br>
+                    &nbsp; &nbsp;" . . . In
+                    general, VLAs not useful. They’re time bombs. VLAs are nearly always
+                    the wrong choice . . . "&nbsp;
+                    &nbsp;</em>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="text-decoration: underline; font-family: Arial;">LECTURE-05</h2>
+
+<div style="margin-left: 40px; font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Content:</span>
+<strong>Functions</strong>
+and procedures in programming languages. Declaring, defining and
+invoking the function. Parameter-less functions. Explicit passing of
+the data via the argument list or the return statement. <strong>Passing
+    arguments</strong> by value, by pointer and by reference. Default values for arguments.<br>
+
+<span style="color: rgb(152, 202, 62);"><br>Slides:</span>&nbsp; <a href="Lecture-Slides/2024_L05_Functions.pdf"><strong>L05 -Functions (PDF)</strong></a><br>
+&nbsp; &nbsp;<br><span style="color: rgb(152, 202, 62);">
+    Other resources:</span><br>
+
+&nbsp; - w3schools - <a href="https://www.w3schools.com/c/c_functions.php">C Functions</a>
+&nbsp;tutorial, &nbsp;Function <a href="https://www.w3schools.com/c/c_functions_parameters.php">parameters</a>
+, Function <a href="https://www.w3schools.com/c/c_functions_decl.php">declaration
+    and definition</a> <br>
+&nbsp; - cplusplus - <a href="https://www.cplusplus.com/doc/tutorial/functions/">Functions</a>
+&nbsp;tutorial<br>
+&nbsp; - MIT course - Lecture 3 notes:&nbsp;<a href="https://ocw.mit.edu/courses/6-096-introduction-to-c-january-iap-2011/1b954ce3fc96fd1168f8cd123c5748e4_MIT6_096IAP11_lec03.pdf">Functions</a>
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="text-decoration: underline; font-family: Arial;">LECTURE-06</h2>
+
+<div style="margin-left: 40px; font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Content:</span>
+<strong>Pointers,</strong>
+    computer <strong>memory addresses</strong>, pointers to variables and memory, <strong>pointers
+        arithmetic</strong> in C/C++. The relationship between pointers and arrays.
+    Working with arrays using the pointer notation i. Passing arguments to
+    the function by address. Standard C functions which operate directly on
+    computer memory &lt;string.h&gt; (memset, memcpy, memcmp, memmove, etc.)<br>
+<br>
+    <span style="color: rgb(152, 202, 62);">Slides:</span> &nbsp; <strong><a href="Lecture-Slides/2024_L06_Pointers.pdf">L06 - Pointers(PDF)</a></strong><br>
+
+    <br><span style="color: rgb(152, 202, 62);">
+    Other resources:</span><br>
+
+    &nbsp;- &nbsp;MIT: Lecture 5 notes <a href="https://ocw.mit.edu/courses/6-096-introduction-to-c-january-iap-2011/0240aeefb6d5fb9c0a20587ed98fa7ca_MIT6_096IAP11_lec05.pdf"><strong>Pointers</strong></a><br>
+
+    &nbsp;- &nbsp;guru99: <a href="https://www.guru99.com/c-pointers.html">Pointers in C
+        Programming: What is Pointer, Types &amp; Examples</a>&nbsp; <br>
+
+    &nbsp;- &nbsp;tutorialspoint: <a href="https://www.tutorialspoint.com/cprogramming/c_pointers.htm">C -
+        Pointers</a> (Pointer
+    arithmetic, Array of pointers, Pointer to pointer, Passing pointers to
+    functions)<br>
+
+    &nbsp; - Wikibooks/ C
+    programming: <a href="https://en.wikibooks.org/wiki/C_Programming/Pointers_and_arrays">Pointers</a>
+    <br>
+
+    &nbsp;- &nbsp;programiz: <a href="https://www.programiz.com/c-programming/c-pointers">C Pointers
+        (with examples)</a><br>
+
+    &nbsp;- &nbsp;programiz: <a href="https://www.programiz.com/c-programming/c-pointers-arrays">Relationship
+        Between Arrays and Pointers</a>
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="text-decoration: underline; font-family: Arial;">LECTURE-07/08</h2>
+
+<div style="margin-left: 40px; font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Content:</span>
+<strong>C-string</strong>
+- an array representation of strings in C/C++. Declaring, defining, and
+manipulating the null-terminated character sequences. <strong>
+<br>
+Standard C library &lt;string.h&gt;</strong>
+(strcpy, strcmp, strcat, strlen, etc.). Examples of user-defined functions for
+processing textual data.<br>
+<br>
+<span style="color: rgb(152, 202, 62);">Slides:</span> &nbsp; <strong><a href="Lecture-Slides/2024_L07_C_strings.pdf">L07 -C-string - char arrays&nbsp; (PDF)</a></strong><br>
+<br>
+<span style="color: rgb(152, 202, 62);">Additional examples:</span> <a href="Lecture-Slides/2024_L08_Examples_of_text-processing_functions.pdf">L08 Writing custom functions performing C-string text processing</a>  
+<br><br>
+<span style="color: rgb(152, 202, 62);">Other resources:</span><br>
+&nbsp; -
+Wikibooks/Language C - <a href="https://en.wikibooks.org/wiki/C_Programming/String_manipulation">String
+    manipulation</a>&nbsp; ( PL: <a href="https://pl.wikibooks.org/wiki/C/Napisy">Napisy</a> )<br>
+&nbsp; -
+guru99: <a href="https://www.guru99.com/c-strings.html">Strings
+    in C: How to Declare Variable, Initialize, Print, Examples</a><br>
+
+&nbsp; -
+cplusplus: <a href="https://www.cplusplus.com/doc/tutorial/ntcs/">Null-terminated
+    character sequences</a>
+&nbsp;tutorial
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="text-decoration: underline; font-family: Arial;">LECTURE-09</h2>
+
+<div style="margin-left: 40px; font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Content:</span>
+<strong>Structural type</strong> - the concept of structures in C/C++. 
+Definition, declaration and initialization of structural variables. <br>
+Nesting of composite types (structures and arrays). An example of a simple
+in-memory database (using the data representation in the form of arrays
+of structures).<br>
+<br>
+<span style="color: rgb(152, 202, 62);">Slides:</span>&nbsp; <strong><a href="Lecture-Slides/2024_L09_Struct.pdf">L09 -Struct (PDF)</a></strong><br>
+<br>
+<span style="color: rgb(152, 202, 62);">Additional examples:</span>&nbsp; <a href="Lecture-Slides/2024_L09b_Examples_of_struct_array_processing.pdf">L09b - Example tasks using array of struct</a><br>
+<br>
+<span style="color: rgb(152, 202, 62);">Other resources:</span><br>
+&nbsp; - cplusplus: <a href="https://www.cplusplus.com/doc/tutorial/structures/">Data
+    structures</a><br>
+&nbsp; - tutorialspoint: <a href="https://www.tutorialspoint.com/cprogramming/c_structures.htm">C
+    - Structures</a><br>
+&nbsp; - programiz: <a href="https://www.programiz.com/c-programming/c-structures">C struct</a><br>
+&nbsp; - guru99: <a href="https://www.guru99.com/cpp-structures.html">What
+    is a Struct in C++</a><br>
+&nbsp; - guru99: <a href="https://www.guru99.com/structure-vs-class.html">Difference
+    between Structure and Class: Explained with C++ Example</a>
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="text-decoration: underline; font-family: Arial;">LECTURE-10/11</h2>
+
+<div style="margin-left: 40px; font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Content:</span>
+<strong>FILES</strong> - support
+for <strong>external memory</strong> in the form of raw data files. Random access and
+<strong>text files</strong>. Procedural &lt;stdio.h&gt; libraries for standard file
+operations. Input and output operations for the characters, strings and
+formatted data. <strong>Binary data - block files</strong>. Portability of the data
+representation between different operating systems..<br>
+<br>
+
+<span style="color: rgb(152, 202, 62);">Slides:</span>&nbsp; <a href="Lecture-Slides/2024_L10_Files.pdf"><strong>L10 - Files (PDF)</strong></a><br>
+&nbsp; <br>
+
+<span style="color: rgb(152, 202, 62);">Other resources:</span><br>
+&nbsp; - WikiBooks - <a href="https://en.wikibooks.org/wiki/C_Programming/Stream_IO">C
+    Programming/Stream IO</a><br>
+
+&nbsp; - programiz:
+&nbsp;<a href="https://www.programiz.com/c-programming/c-file-input-output">C
+    Files Input/Output</a> &nbsp;+ &nbsp;<a href="https://www.programiz.com/c-programming/c-file-examples">C
+    Files Examples</a><br>
+
+&nbsp;
+- guru99: <a href="https://www.guru99.com/c-file-input-output.html">C
+    File management</a><br>
+
+&nbsp; - tutorialspoint: &nbsp;<a href="https://www.tutorialspoint.com/cprogramming/c_file_io.htm">C
+    - file I/O</a><a href="https://www.programiz.com/c-programming/c-file-examples"><br>
+</a>&nbsp; - codingeek: Files in C Programming
+Language: <a href="https://www.codingeek.com/tutorials/c-programming/files-introduction-various-file-modes/">Introduction
+    and Various File Modes</a><br>
+
+&nbsp; &nbsp; + &nbsp;<a href="https://www.codingeek.com/tutorials/c-programming/file-operations-in-c-programming-language/">File
+    operations</a> &nbsp;+ &nbsp;<a href="https://www.codingeek.com/tutorials/c-programming/inputoutput-in-files/">Examples
+    and explanation of fgets, fputs, fprintf, fscanf, fread, fwrite</a><br>
+
+&nbsp; &nbsp; + &nbsp;<a href="https://www.codingeek.com/tutorials/c-programming/text-files-vs-binary-files-in-c-programming-language/">Text
+    Files vs Binary Files</a><br>
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="text-decoration: underline; font-family: Arial;">LECTURE-11</h2>
+
+
+<div style="margin-left: 40px; font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Content:</span>
+Completing the remaining slides for the lecture 10 (<em>on external files</em>) 
+and discussing additional demonstrations/examples of <strong>TEXT</strong> and <strong>BINARY</strong> files processing.<br>
+<br>
+<span style="color: rgb(152, 202, 62);">Additional slides:</span><br> 
+&nbsp; - <strong><a href="Lecture-Slides/2024_L11a_Examples_of_TEXT_files.pdf">L11a - Examples for TEXT files operations (PDF)</a></strong><br>
+&nbsp; - <strong><a href="Lecture-Slides/2024_L11b_Examples_of_BINARY_files.pdf">L11b - Examples for BINARY files operations (PDF)</a></strong><br>
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="text-decoration: underline; font-family: Arial;">LECTURE-12</h2>
+
+<div style="margin-left: 40px; font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Content:</span>
+Dynamic <strong>
+    memory allocation</strong>. Allocating and freeing the allocated memory (<strong>malloc</strong>, <strong>calloc</strong>, <strong>free</strong> / <strong>new</strong>&nbsp;and <strong>delete</strong> operators). <br>
+Heap overflow and dynamic data corruption. Dynamic allocation and
+reallocation of arrays of a specified size.<br><br>
+
+<em><span style="color: rgb(152, 202, 62);">Slides:</span></em>&nbsp; <br>&nbsp; - <a href="Lecture-Slides/2024_L12_Dynamic_memory_allocation.pdf"><strong>L12 - Dynamic memory allocation (PDF)</strong></a><br>&nbsp; - Comparision of: &nbsp;<a href="Lecture-Slides/2024_L12b_static_versus_dynamic_array.pdf"><strong>static</strong> array, &nbsp;<strong>quazi-dynamic</strong> array (with boundedmax size), and <strong>dynamic</strong> array</a><br>
+&nbsp; &nbsp;<br>
+<em><span style="color: rgb(152, 202, 62);">Other resources:</span></em><br>
+&nbsp; - BinaryUpdates: <a href="https://binaryupdates.com/dynamic-memory-allocation-in-c-programming/">Dynamic
+    Memory Allocation in C Programming</a><br>
+&nbsp; - Design&amp;Reuse: <a href="https://www.design-reuse.com/articles/25090/dynamic-memory-allocation-fragmentation-c.html">Dynamic
+    Memory Allocation and Fragmentation in C and C++</a><br>
+&nbsp; - Guru99: <a href="https://www.guru99.com/c-dynamic-memory-allocation.html">Dynamic
+    Memory Allocation in C using malloc(), calloc() Functions</a> ,<br>
+&nbsp; - GeeksForGeeks: <a href="https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/">Dynamic
+    Memory Allocation in C using malloc(), calloc(), free() and realloc()</a><br>
+&nbsp; - cplusplus: <a href="https://www.cplusplus.com/doc/tutorial/dynamic/">Dynamic memory</a>
+&nbsp;tutorial<br>
+
+&nbsp; - Guru99:&nbsp; <a href="https://www.guru99.com/cpp-dynamic-array.html">C++ Dynamic
+    Allocation of Arrays with Example</a> , &nbsp; <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; :&nbsp; <a href="https://www.guru99.com/stack-vs-heap.html">Stack vs Heap: Know
+    the Difference</a>
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="text-decoration: underline; font-family: Arial;">LECTURE-13</h2>
+
+<div style="margin-left: 40px; font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Content:</span>
+Repetition of selected problems from whole semester (preparation to final exam)<br>
+Additional&nbsp;examples of binary files processing.<br>
+
+<br><em><span style="color: rgb(152, 202, 62);">Slides:</span></em> <br>&nbsp; &nbsp;&nbsp; &nbsp; <a href="Lecture-Slides/2024_L11b_Examples_of_BINARY_files.pdf">Examples of binary file operations (PDF)</a>
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="text-decoration: underline; font-family: Arial;">LECTURE-14</h2>
+
+<div style="margin-left: 40px; font-family: Arial;">
+<span style="color: red">
+Final examination </span> (stationary, written on the paper)<br>
+Retake is planned one week later.</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+</body></html>

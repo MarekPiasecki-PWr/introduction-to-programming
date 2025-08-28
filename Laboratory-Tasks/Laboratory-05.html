@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr" lang="en">
+
+<head>
+<meta content="text/html; charset=ISO-8859-2" http-equiv="content-type">
+<meta content="Marek Piasecki" name="author">
+<title>[ITP] ARCHIVES - Introduction to Programming 2024 - LABORATORY</title>
+</head>
+
+<body>
+<span style="font-style: italic">
+<span style="font-weight: bold; color: red;">ARCHIVES '2024: &nbsp;&nbsp;</span> 
+
+"Introduction to Programming" &nbsp;LABORATORY - <a href="https://wefim.pwr.edu.pl/en/">Faculty of Electronics, Photonics and Microsystems</a>&nbsp;
+-&nbsp; Electronic and Computer Engineering&nbsp; (ECE)
+</span>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h1 style="font-family: Arial;">LABORATORY <u style="background-color: yellow;">&nbsp;L5&nbsp;</u> : C-arrays</h2>
+
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Introductory description:</span>
+</div>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<p dir="ltr">Exercises in creating programs that illustrate
+    the
+    use of the<strong> table/array data representation</strong>. <strong>Processing arrays</strong> using a loop:<br></p>
+<ul>
+    <li>Slides number 5-6, from the "<a href="../Lecture-Slides/2024_L04_Arrays.pdf">Lecture_04</a>", that illustrate the use of instruction "for" to automate operations on arrays.<br>&nbsp;&nbsp; <br></li>
+    <li>List of example tasks on web page: <a href="http://marek.piasecki.staff.iiar.pwr.wroc.pl/dydaktyka/itp/laboratory.html#Lab05">Laboratory_5 default exercises<br>&nbsp;&nbsp; <br></a></li>
+    <li>Example tutorial for self-studying and <strong>laboratory preparation</strong>: <a href="https://www.tutorialspoint.com/data_structures_algorithms/array_data_structure.htm">Data Structures and Algorithms - Arrays</a><br></li>
+</ul>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L5.T1</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task to be performed:</span>
+</div>
+<br>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+Write a program that allows for storing <strong>a collection of real numbers</strong> (loaded from the keyboard) in the C-array composed of <strong>N</strong> cells.<br>The maximal capacity (physical size) of the array, should be defined as <strong>const int</strong> c(for example <strong>N=10</strong><span><span>)</span>.</span><br><br>When entering the data, the program should display user-friendly prompts in the form:<br>&nbsp;&nbsp;&nbsp; T<strong>ab[1]</strong>
+= <span class="" style="background-color: rgb(152, 202, 62);">12.0</span><br>&nbsp;&nbsp;&nbsp; <strong>Tab[2]</strong> = <span class="" style="background-color: rgb(152, 202, 62);">-1.0</span><br>
+<div>&nbsp;&nbsp;&nbsp; <strong>Tab[3]</strong> = <span class="" style="background-color: rgb(152, 202, 62);">....... </span><br></div>
+<div><br></div>
+<div>After completing the input loop, the program should execute following operations: <br></div>
+<div>
+    <ol>
+        <li><strong>display all</strong> the loaded data ( starting from array[<strong>0</strong>] to array[<strong>n-1</strong>] )<br></li>
+        <li>display the array content in
+            <strong>reverse order</strong> (starting<span id="result_box" lang="en"> from
+                the last element and
+                ending with the first).</span>
+        </li>
+        <li><span id="result_box" lang="en">calculate the <strong>mean</strong> (arithmetic average value) from all numbers in array.<br></span></li>
+    </ol>
+</div>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L5.T2</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task:</span>
+</div>
+<br>
+<div style="margin-left: 40px;font-family: Arial;">
+
+Write a program that fills 10-elemental array with
+<strong>random</strong>
+integers from range [-20,+50], <br>and then:<br><br>
+<div><strong>a)</strong> <span id="result_box" lang="en">counts total number of negative and
+        positive numbers in an array</span><br></div>
+<div><strong>b)</strong> <span id="result_box" lang="en">calculate <strong>extreme</strong> values (minimum and maximum)<br><strong>c)&nbsp;</strong><span><span id="result_box" lang="en">find the <strong>second largest</strong> element in
+                an
+                array,<br><strong>d)</strong><span>&nbsp;<span id="result_box" lang="en">(*) calculate <a href="https://en.wikipedia.org/wiki/Mean_squared_error">Mean
+                            Squared
+                            Error</a> (population variance)</span></span><span> </span></span></span><span></span></span><br>
+</div>
+<div><br></div>
+<div><br></div>
+<div><span class="" style="background-color: rgb(152, 202, 62);">Hint:</span><br></div>
+<div>The <a href="https://www.cplusplus.com/reference/cstdlib/rand/">rand()</a> function, from library &lt;stdlib.h&gt;, can be used to generate random numbers.<br><br>Functions&nbsp; <a href="https://www.cplusplus.com/reference/cstdlib/srand/">srand()</a> and <a href="https://www.cplusplus.com/reference/ctime/time/">time()</a>&nbsp;&nbsp; <br>(<em>the second is from library </em>&lt;time.h&gt;),<br>can be used to initialise random pseudo-generator.</div>
+<div><br></div>
+<hr>
+<strong><span class="" style="color: rgb(152, 202, 62);">*</span></strong><span class="" style="color: rgb(152, 202, 62);"> </span><em><span class="" style="color: rgb(152, 202, 62);">As possible extension (improvement), the currently used number of elements (logical size), could be different (smaller) than </span><strong><span class="" style="color: rgb(152, 202, 62);">N</span></strong><span class="" style="color: rgb(152, 202, 62);"> , and represented by additional </span><strong><span class="" style="color: rgb(152, 202, 62);">int</span></strong><span class="" style="color: rgb(152, 202, 62);"> variable </span><strong><span class="" style="color: rgb(152, 202, 62);">n</span></strong><span class="" style="color: rgb(152, 202, 62);">.</span><br><span class="" style="color: rgb(152, 202, 62);">In this case, there are to sizes: </span><br><span class="" style="color: rgb(152, 202, 62);">1) physical/maximal constant size </span><strong><span class="" style="color: rgb(152, 202, 62);">N=10</span><br></strong><span class="" style="color: rgb(152, 202, 62);">2) logical/used size </span><span><span class="" style="color: rgb(152, 202, 62);"><strong>n</strong>&nbsp; ( variable loaded from keyboard, which should be <strong>n&lt;=N</strong> )</span></span></em>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+
+<!-- ################################################################# -->
+
+<span style="font-style: italic">
+<a href="../[ITP] LABORATORY Introduction to Programming 2024.html">Return to the main description</a>
+  of the entire laboratory
+</span>
+
+</body></html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr" lang="en">
+
+<head>
+<meta content="text/html; charset=ISO-8859-2" http-equiv="content-type">
+<meta content="Marek Piasecki" name="author">
+<title>[ITP] ARCHIVES - Introduction to Programming 2024 - LABORATORY</title>
+</head>
+
+<body>
+<span style="font-style: italic">
+<span style="font-weight: bold; color: red;">ARCHIVES '2024: &nbsp;&nbsp;</span> 
+
+"Introduction to Programming" &nbsp;LABORATORY - <a href="https://wefim.pwr.edu.pl/en/">Faculty of Electronics, Photonics and Microsystems</a>&nbsp;
+-&nbsp; Electronic and Computer Engineering&nbsp; (ECE)
+</span>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h1 style="font-family: Arial;">LABORATORY <u style="background-color: yellow;">&nbsp;L11&nbsp;</u> : Using 'struct' type, to represent more complex data</h2>
+
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Materials for self-studying and laboratory preparation:</span>
+</div>
+<br>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+&nbsp; - tutorialspoint:&nbsp; <a href="https://www.tutorialspoint.com/cprogramming/c_structures.htm">C - Structures</a><br>&nbsp; - cplusplus:&nbsp; <a href="https://www.cplusplus.com/doc/tutorial/structures/">Data structures</a><br><br><strong><span class="" style="color: rgb(239, 69, 64);">NOTE:</span></strong><br>In last part of this programming course (in January 2025), the programs should be implemented in&nbsp; <span class="" style="background-color: rgb(255, 207, 53);"><strong>C</strong><strong>++</strong></span> . <br>All new projects (in CLion IDE) should be created with&nbsp; "<strong>C++ Executable</strong>"&nbsp; option.<br>To
+implement user interface, you can continue to use printf/scanf from
+&lt;stdio.h&gt;, or switch to cout/cin streams from &lt;iostream&gt;
+library.<br>
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L11.T1</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task to be performed:</span>
+</div>
+<br>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<u>Using the <strong>struct</strong> type to organise (group/agregate) nontrivial data collections.</u><br><br>Declare the <span class="" style="background-color: rgb(255, 207, 53);">struct </span><strong><span class="" style="background-color: rgb(255, 207, 53);">ArrayWithCounter</span></strong>, which represents / contains:<br>&nbsp;&nbsp; - <strong>numbers</strong> - 10 elements array of double numbers,<br>
+<div>&nbsp;&nbsp; - <strong>size</strong> - an integer counter, informing how many (from above 10) elements contain valid data (logical size).<br>In C++, the struct declaration, may even contain the definition of maximal (physical) size<br>&nbsp;&nbsp; - static const int MAX_SIZE = 10;<br></div>
+<div><br></div>Declare the <span class="" style="background-color: rgb(255, 207, 53);">struct </span><strong><span class="" style="background-color: rgb(255, 207, 53);">StatResults</span></strong>, which represents / contains three fields:<br>&nbsp;&nbsp;&nbsp; -&nbsp; <strong>avg</strong> - the arithmetic average value (calculated for specified array)<br>
+<div>&nbsp;&nbsp;&nbsp; -&nbsp; <strong>min</strong> - the minimal value</div>
+<div>&nbsp;&nbsp;&nbsp; -&nbsp; <strong>max</strong> - the maximal value<br></div>
+<div><br></div>
+<div>Write a function <strong><span class="" style="background-color: rgb(255, 207, 53);">CalculateStatistics</span></strong>
+    which analyse the content of an array (received as an argument), calculate basic statistics (avg, min, max) and return
+    calculated results in the form of struct:<br></div>
+<div>&nbsp;&nbsp;&nbsp;<span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp; StatResults&nbsp; </span><strong><span class="" style="background-color: rgb(255, 207, 53);">CalculateStatistics</span></strong><span class="" style="background-color: rgb(255, 207, 53);">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ArrayWithCounter&nbsp;&nbsp; inputArray ); &nbsp;&nbsp;<span class="" style="background-color: rgb(255, 255, 255);">&nbsp;</span><span class="" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;&nbsp; <span><span><em><span class="" style="color: rgb(152, 202, 62);">// "by value",&nbsp; (huge copy) ,&nbsp; possible in C and C++</span></em></span></span></span></span><br></div>
+<div>or alternatively:</div>
+<div>&nbsp;&nbsp;&nbsp;<span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp; StatResults&nbsp; </span><strong><span class="" style="background-color: rgb(255, 207, 53);">CalculateStatistics</span></strong><span class="" style="background-color: rgb(255, 207, 53);">( </span><strong><span class="" style="background-color: rgb(255, 207, 53); color: rgb(239, 69, 64);">const</span></strong><span class="" style="background-color: rgb(255, 207, 53);"> ArrayWithCounter </span><strong><span class="" style="background-color: rgb(255, 207, 53); color: rgb(239, 69, 64);">&amp;</span></strong><span class="" style="background-color: rgb(255, 207, 53);">inputArray ); &nbsp;<span class="" style="background-color: rgb(255, 255, 255);"> &nbsp; &nbsp; <em><span class="" style="color: rgb(152, 202, 62);">// "by reference", possible in C++ only</span></em></span></span> <br></div>
+<div>
+    <div>or <br></div>
+    <div><span class="" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;</span><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp; StatResults&nbsp; </span><strong><span class="" style="background-color: rgb(255, 207, 53);">CalculateStatistics</span></strong><span class="" style="background-color: rgb(255, 207, 53);">( </span><strong><span class="" style="background-color: rgb(255, 207, 53); color: rgb(239, 69, 64);">const</span></strong><span class="" style="background-color: rgb(255, 207, 53);"> ArrayWithCounter </span><strong><span class="" style="background-color: rgb(255, 207, 53); color: rgb(239, 69, 64);">*</span></strong><span class="" style="background-color: rgb(255, 207, 53);">inputArray ); &nbsp;&nbsp;<span class="" style="background-color: rgb(255, 255, 255);">&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span><span><em><span class="" style="color: rgb(152, 202, 62);">// "by pointer", possible in C and C++</span></em></span></span><br></div>
+    <div></div>&nbsp; <br>
+</div>
+
+<div><span class="" style="color: rgb(152, 202, 62);"><em><br>
+            <table border="1" cellpadding="15" cellspacing="1">
+
+                <tbody>
+                    <tr>
+                        <td><span><em>Illustration, how such function could be defined, can be found at the bottom the <strong>page 3</strong> in</em></span> <a href="../Lecture-Slides/2024_L09_Struct.pdf">Lecture_09 SLIDES</a><br><em>or in TutorialsPoint tutorial:&nbsp; </em>"<a href="https://www.tutorialspoint.com/cprogramming/c_structures_and_functions.htm">Structures and Functions in C</a>"<br></td>
+                    </tr>
+                </tbody>
+            </table>&nbsp;&nbsp; <br>
+        </em></span></div>
+<div><br>Example demonstration / testing program / for expected target function <strong>CalculateStatistics</strong>:</div>
+<div><br></div>
+<div><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp;&nbsp; ArrayWithCounter&nbsp; </span><strong><span class="" style="background-color: rgb(152, 202, 62);">arr</span></strong><span class="" style="background-color: rgb(152, 202, 62);">,&nbsp; second_array,&nbsp; array_3; &nbsp; &nbsp; </span><br></div>
+<div><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp;&nbsp; StatResults&nbsp; </span><strong><span class="" style="background-color: rgb(152, 202, 62);">result</span></strong><span class="" style="background-color: rgb(152, 202, 62);">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><br><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp;&nbsp; . . .&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; </span><br><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp;&nbsp; </span><strong><span class="" style="background-color: rgb(152, 202, 62);">arr</span></strong><span class="" style="background-color: rgb(152, 202, 62);">.</span><strong><span class="" style="background-color: rgb(152, 202, 62);">size</span></strong><span class="" style="background-color: rgb(152, 202, 62);">=2;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; </span><br><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp;&nbsp; </span><strong><span class="" style="background-color: rgb(152, 202, 62);">arr</span></strong><span class="" style="background-color: rgb(152, 202, 62);">.</span><strong><span class="" style="background-color: rgb(152, 202, 62);">numbers</span></strong><span class="" style="background-color: rgb(152, 202, 62);">[0]=123.4;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; </span><br><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp;&nbsp; </span><strong><span class="" style="background-color: rgb(152, 202, 62);">arr</span></strong><span class="" style="background-color: rgb(152, 202, 62);">.</span><strong><span class="" style="background-color: rgb(152, 202, 62);">numbers</span></strong><span class="" style="background-color: rgb(152, 202, 62);">[1]=567.8;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; </span><br><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp;&nbsp; . . .&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><br><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp;&nbsp; </span><strong><span class="" style="background-color: rgb(152, 202, 62);">result</span></strong><span class="" style="background-color: rgb(152, 202, 62);"> = <span class="" style="color: rgb(239, 69, 64);">CalculateStatistics</span>( </span><strong><span class="" style="background-color: rgb(152, 202, 62);">arr</span></strong><span class="" style="background-color: rgb(152, 202, 62);"> );&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; </span><br><span class="" style="background-color: rgb(152, 202, 62);">&nbsp;&nbsp;&nbsp;&nbsp; cout &lt;&lt; "The average = " &lt;&lt; </span><strong><span class="" style="background-color: rgb(152, 202, 62);">result</span></strong><span class="" style="background-color: rgb(152, 202, 62);">.</span><strong><span class="" style="background-color: rgb(152, 202, 62);">avg</span></strong><span class="" style="background-color: rgb(152, 202, 62);">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></div>
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L11.T2</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task:</span>
+</div>
+<br>
+<div style="margin-left: 40px;font-family: Arial;">
+
+<strong>a) </strong><strong>Select the "subject / theme"</strong> of your final database
+implementation task (for: lab11, lab12, lab13),<br>
+<div>which will use struct/record described by 5-6 fields of different type.</div>
+<div><br></div>
+<div>It
+    potentially could be:<br>&nbsp;&nbsp;&nbsp; - the
+    catalog of <strong>books</strong> in your private <strong>library</strong>, <br>&nbsp;&nbsp;&nbsp; - or an offer list of <strong>cars</strong> in
+    second-hand <strong>car dealership</strong>, <br>&nbsp;&nbsp;&nbsp; - or a student's <strong>budget</strong> ie. catalog of
+    monthly <strong>expenses</strong>, etc.<br>
+    <div>&nbsp;&nbsp;&nbsp; - or&nbsp; .&nbsp; .&nbsp; .&nbsp; any other<br><br><span><span><em><span class="" style="color: rgb(152, 202, 62);">Example illustrations of such themes, can be found in </span></em><a href="../Lecture-Slides/2024_L09b_Examples_of_struct_array_processing.pdf">additional examples</a> <em><span class="" style="color: rgb(152, 202, 62);">for lecture 9<br>&nbsp; </span></em></span></span><br></div><br><strong>b)</strong> <strong>Define the
+        structure type</strong>, which allows to store the data of a single
+    element of selected database instance,<br><br>
+</div>
+<div>For example:<br><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp;&nbsp; struct </span><strong><span class="" style="background-color: rgb(255, 207, 53);">CarData&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <br></strong></div>
+<div><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp;&nbsp; {&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <br></div>
+<div><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char </span><strong><span class="" style="background-color: rgb(255, 207, 53);">brandName</span></strong><span class="" style="background-color: rgb(255, 207, 53);">[50];&nbsp;&nbsp;&nbsp;</span>&nbsp; // for example: "Ford Escort 1.8"<br><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int&nbsp;&nbsp;&nbsp; </span><strong><span class="" style="background-color: rgb(255, 207, 53);">mileAge</span></strong><span class="" style="background-color: rgb(255, 207, 53);">;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp; // 150 000 km<br><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char </span><strong><span class="" style="background-color: rgb(255, 207, 53);">engineType</span></strong><span class="" style="background-color: rgb(255, 207, 53);">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp; //&nbsp; 'D'&nbsp; like Diesel<br><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bool </span><strong><span class="" style="background-color: rgb(255, 207, 53);">airConditioning</span></strong><span class="" style="background-color: rgb(255, 207, 53);">;&nbsp;&nbsp;</span>&nbsp; //&nbsp; true&nbsp;&nbsp; (has car air conditioning system)<br><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; float </span><strong><span class="" style="background-color: rgb(255, 207, 53);">price</span></strong><span class="" style="background-color: rgb(255, 207, 53);">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp; //&nbsp; 7 500zł<br><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp;&nbsp;&nbsp; };&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; <br></span></div>
+<div><span class="" style="background-color: rgb(255, 207, 53);"><span class="" style="background-color: rgb(255, 255, 255);">&nbsp; </span><br></span></div><br>
+<div><strong>c) </strong><strong>Implement
+        functions</strong> which allow to:</div>
+<div>&nbsp;&nbsp;&nbsp;&nbsp; -&nbsp; input (read from
+    keyboard):&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;<span class="" style="background-color: rgb(255, 207, 53);"> &nbsp; CarData </span><strong><span class="" style="background-color: rgb(255, 207, 53);">readFromKeyboard</span></strong><span class="" style="background-color: rgb(255, 207, 53);">(void);&nbsp;&nbsp; </span><br>&nbsp;&nbsp;&nbsp;&nbsp; -&nbsp; modify / update
+    selected field:&nbsp;&nbsp;&nbsp;<span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp; void </span><strong><span class="" style="background-color: rgb(255, 207, 53);">update</span></strong><span class="" style="background-color: rgb(255, 207, 53);">( CarData &amp;car ); &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</span> <br>&nbsp; &nbsp;&nbsp; -&nbsp; output (display on
+    the screen):&nbsp;&nbsp;&nbsp;<span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&nbsp; void </span><strong><span class="" style="background-color: rgb(255, 207, 53);">display</span></strong><span class="" style="background-color: rgb(255, 207, 53);">( CarData car );&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;</span> <br>the content of one database element.<br></div>The structure should be
+"<em><span class="" style="color: rgb(125, 159, 211);">passed to</span></em>" or "<em><span class="" style="color: rgb(125, 159, 211);">returned from</span></em>" as an argument of above functions.
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+
+<!-- ################################################################# -->
+
+<span style="font-style: italic">
+<a href="../[ITP] LABORATORY Introduction to Programming 2024.html">Return to the main description</a>
+  of the entire laboratory
+</span>
+
+</body></html>

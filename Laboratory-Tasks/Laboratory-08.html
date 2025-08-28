@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr" lang="en">
+
+<head>
+<meta content="text/html; charset=ISO-8859-2" http-equiv="content-type">
+<meta content="Marek Piasecki" name="author">
+<title>[ITP] ARCHIVES - Introduction to Programming 2024 - LABORATORY</title>
+</head>
+
+<body>
+<span style="font-style: italic">
+<span style="font-weight: bold; color: red;">ARCHIVES '2024: &nbsp;&nbsp;</span> 
+
+"Introduction to Programming" &nbsp;LABORATORY - <a href="https://wefim.pwr.edu.pl/en/">Faculty of Electronics, Photonics and Microsystems</a>&nbsp;
+-&nbsp; Electronic and Computer Engineering&nbsp; (ECE)
+</span>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h1 style="font-family: Arial;">LABORATORY <u style="background-color: yellow;">&nbsp;L8&nbsp;</u> : Functions with parameters + Array Algorithms</h2>
+
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Introductory description:</span>
+</div>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<p dir="ltr" style="text-align: left;">Selected materials for self-studying and&nbsp; laboratory preparation:</p>
+<ul dir="ltr">
+    <li style="text-align: left;">w3schools - <a href="https://www.w3schools.com/c/c_functions_parameters.php">C Function Parameters</a></li>
+    <li style="text-align: left;">Wikibooks - C Programming / <a href="https://en.wikibooks.org/wiki/C_Programming/Procedures_and_functions">Procedures and Functions</a><br></li>
+    <li style="text-align: left;">GeeksForGeeks - examples of standard <a href="https://www.geeksforgeeks.org/searching-algorithms/#standard">problems on searching and analysing an array</a> (Easy-Medium-Hard)<br></li>
+</ul>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L8.T1</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task to be performed:</span>
+</div>
+<br>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<div><strong>Practice INSERTING and DELETING some values inside the array:</strong><br>Write the program, which first creates an array of N numbers (with some predefined content), <br>and than allows the user to ADD new numbers (at the specified position),<br>or DELETE numbers which match some user defined criterion (the value or alternatively the position).</div>
+<div><br></div>
+<div>The best approach is to create the program MENU, which controls executions of four functions:<br>&nbsp; a) void <strong>loadValuesIntoArray</strong>( int A[ ], int max_capacity, int* used_size );<br>&nbsp; b) void <strong>printArrayContent</strong>( int A[ ], int used_size );<br>&nbsp; c)&nbsp;&nbsp;&nbsp; int <strong>insertValueIntoArray</strong>( int A[ ], int max_capacity, int* used_size, int <strong>value</strong>, int <strong>position</strong> ); <br>&nbsp; d) &nbsp;&nbsp; int<strong> </strong><strong>deleteAllNegativeNumbers</strong>( int A[ ], int* used_size );</div>
+<div><br></div>
+<div>The problem of <strong>inserting</strong> and <strong>deleting</strong> elements in the array, is well explained in material: <a href="https://www.tutorialspoint.com/data_structures_algorithms/array_data_structure.htm"><strong>Data Structures and Algorithms - Array Algorithms</strong></a></div>
+<div><br></div>
+<div>Another
+    collection of advantageous materials (with many example solutions in:
+    C, C++, Java, Python, C#, PHP) can be found at GeeksForGeeks tutorial: <a href="https://www.geeksforgeeks.org/array-data-structure/">Array Data Structure</a></div>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L8.T2</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task:</span>
+</div>
+<br>
+<div style="margin-left: 40px;font-family: Arial;">
+
+<div id="intro">
+    <div>
+        <div id="intro">
+            <div><strong>SORTING algorithms:</strong><br>Write your own implementation of "<a href="https://en.wikipedia.org/wiki/Selection_sort"><strong>Selection
+                        Sort</strong></a>" or "<a href="https://en.wikipedia.org/wiki/Insertion_sort"><strong>Insertion
+                        Sort</strong></a>" algorithm:<br>&nbsp;&nbsp;<span class="" style="background-color: rgb(255, 207, 53);"> void </span><strong><span class="" style="background-color: rgb(255, 207, 53);">mySort</span></strong><span class="" style="background-color: rgb(255, 207, 53);">( int A[], int size )&nbsp;</span>&nbsp; <br> to <span jsaction="mouseup:BR6jm" jsname="jqKxS" lang="en"><span jsaction="agoMJf:PFBcW;usxOmf:aWLT7;jhKsnd:P7O7bd,F8DmGf;Q4AGo:Gm7gYd,qAKMYb;uFUCPb:pvnm0e,pfE8Hb,PFBcW;f56efd:dJXsye;EnoYf:KNzws,ZJsZZ,JgVSJc;zdMJQc:cCQNKb,ZJsZZ,zchEXc;Ytrrj:JJDvdc;tNR8yc:GeFvjb;oFN6Ye:hij5Wb" jscontroller="Zl5N8" jsmodel="SsMkhd" jsname="txFAF" data-language-for-alternatives="en" data-language-to-translate-into="pl" data-phrase-index="0" jsdata="uqLsIf;_;$577"><span jsaction="click:qtZ4nf,GFf3ac,tMZCfe; contextmenu:Nqw7Te,QP7LD; mouseout:Nqw7Te; mouseover:qtZ4nf,c2aHje" jsname="W297wb">order the contents of the array <strong>int A[N]</strong> in ascending order</span></span></span>.<br><br>Add the menu, which allow to test algorithm correctness, using the array initialised with:<br>1) predefined values:<br>
+                <div>&nbsp; &nbsp;&nbsp; &nbsp;<span class="" style="background-color: rgb(255, 207, 53);"> int A[N]={ </span><strong><span class="" style="background-color: rgb(255, 207, 53);">1, 4, -2, 3, 0, 9</span></strong><span class="" style="background-color: rgb(255, 207, 53);"> };&nbsp;</span>&nbsp; <br></div>
+                <div>2) or alternatively, <br>&nbsp;&nbsp;&nbsp; on a random sequence of values, generated by using the function <strong>rand()</strong></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<span style="font-style: italic">
+<a href="../[ITP] LABORATORY Introduction to Programming 2024.html">Return to the main description</a>
+  of the entire laboratory
+</span>
+
+</body></html>

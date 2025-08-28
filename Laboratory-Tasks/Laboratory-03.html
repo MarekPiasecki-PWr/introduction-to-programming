@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr" lang="en">
+
+<head>
+<meta content="text/html; charset=ISO-8859-2" http-equiv="content-type">
+<meta content="Marek Piasecki" name="author">
+<title>[ITP] ARCHIVES - Introduction to Programming 2024 - LABORATORY</title>
+</head>
+
+<body>
+<span style="font-style: italic">
+<span style="font-weight: bold; color: red;">ARCHIVES '2024: &nbsp;&nbsp;</span> 
+
+"Introduction to Programming" &nbsp;LABORATORY - <a href="https://wefim.pwr.edu.pl/en/">Faculty of Electronics, Photonics and Microsystems</a>&nbsp;
+-&nbsp; Electronic and Computer Engineering&nbsp; (ECE)
+</span>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h1 style="font-family: Arial;">LABORATORY <u style="background-color: yellow;">&nbsp;L3&nbsp;</u> : Simple loop + conditional</h2>
+
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Introductory description:</span>
+</div>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<p dir="ltr" style="text-align: left;">Supplementary materials, for self preparation for class:
+</p>
+<ul>
+    <li>Review pages 1-4 from "<a href="../Lecture-Slides/2024_L03_Loops.pdf" >Lecture_03</a>" slides about loops<br>&nbsp;&nbsp; <br></li>
+    <li>Read section <strong><a href="https://en.wikibooks.org/wiki/C_Programming/Program_flow_control#Loops">"Loops"</a></strong> from Wikibook "C Programming / Program flow control"<br>or Chapter 2.2 from <a href="https://ocw.mit.edu/courses/6-096-introduction-to-c-january-iap-2011/ccef8a1ec946adb5179925311e276a7b_MIT6_096IAP11_lec02.pdf">Lecture 2 Notes : Flow of control</a> (MIT course)</li>
+</ul>
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L3.T1</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task to be performed:</span>
+</div>
+<br>
+<div style="margin-left: 40px;font-family: Arial;">
+
+Write a program, which prints all subsequent integer <strong>numbers between -10 and +10</strong>.<br>i.e.&nbsp; -10, -9, -8, -7, -6, -5, -4, -3, -2, -1, +0, +1, +2, +3, +4, +5, +6, +7, +8, +9, +10
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L3.T2</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task:</span>
+</div>
+<br>
+<div style="margin-left: 40px;font-family: Arial;">
+
+<span lang="en"><span title="">Write
+        a program that <strong>check and classify
+            buttons</strong> pressed on the
+        keyboard.<br>After pressing any button, the program should display one of labels:<br>
+        - <span class="" style="background-color: rgb(255, 207, 53);">lowercase letter</span>&nbsp;&nbsp; ( 'a' , 'b' , 'c' , . . . , 'z' )<br>
+        - <span class="" style="background-color: rgb(152, 202, 62);">capital letter</span>&nbsp;&nbsp; ( 'A' , 'B' , 'C' , . . . , 'Z' )<br>
+        - <span class="" style="background-color: rgb(255, 207, 53);">digit</span>&nbsp;&nbsp; ( '0' , '1' , '2' , '3' , . . . , '9' )<br>
+        - <span class="" style="background-color: rgb(152, 202, 62);">ENTER</span><br>
+        - <span class="" style="background-color: rgb(255, 207, 53);">ESC</span><br>
+        - <span class="" style="background-color: rgb(152, 202, 62);">Left Arrow</span><br>
+        - <span class="" style="background-color: rgb(255, 207, 53);">Right arrow</span><br>
+        - <span class="" style="background-color: rgb(152, 202, 62);">F1 function key</span><br>
+        - <span class="" style="background-color: rgb(255, 207, 53);">Another (unrecognised) key</span><br><br>HINT: to retrieve the keyboard key code, use function <strong>getch()</strong>
+        from the non-standard library &lt;conio.h&gt;. <em><span class="" style="color: rgb(152, 202, 62);"><br>(Note: conio.h exists in Windows OS only, <br>&nbsp;on <a href="https://developer.apple.com/library/archive/documentation/System/Conceptual/ManPages_iPhoneOS/man3/ncurses.3x.html">macOS</a> and <a href="https://man7.org/linux/man-pages/man3/ncurses.3x.html">Linux</a> &lt;<a href="http://jbwyatt.com/ncurses.html">ncurses</a>.h&gt; can be used instead, but its usage is not trivial)</span><br></em></span></span>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L3.T3</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task:</span>
+</div>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<p dir="ltr">Write a program printing <strong>five horizontal
+        lines</strong> on the screen (using 5 different semigraphic characters).<br>The length of lines (number of characters) should be loaded from
+    the keyboard.<br>Each line should be programmed <strong>with different "loop"</strong> instruction/construction:<br><br>1) WHILE implementation:<br>&nbsp;<span class="" style="background-color: rgb(255, 207, 53);">----------------------------------------</span><br><br>2) DO/WHILE implementation:<br>&nbsp;<span class="" style="background-color: rgb(255, 207, 53);">############################</span><br><br>3) FOR implementation:<br><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;@@@@@@@@@@@@@@@@@</span><br><br>4) GOTO implementation (condition at the beginning, equivalent of the loop "WHILE"):<br><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;****************************************</span><br><br>5) second GOTO implementation (condition at the end, equivalent of the loop "DO/WHILE"):<br><span class="" style="background-color: rgb(255, 207, 53);">&nbsp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;&amp;</span></p>
+<p dir="ltr"><strong><br><span class="" style="background-color: rgb(152, 202, 62);">HINT</span></strong><span class="" style="background-color: rgb(152, 202, 62);">:</span><br>Some examples, how to create primitive loop using only instruction&nbsp; <strong>goto</strong> ,<br>can be found in Wikibook "<strong>C Programming / Program flow control</strong>" → in the chapter "<a href="https://en.wikibooks.org/wiki/C_Programming/Program_flow_control#One_last_thing:_goto"><strong>Last thing: goto</strong></a>"</p>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<span style="font-style: italic">
+<a href="../[ITP] LABORATORY Introduction to Programming 2024.html">Return to the main description</a>
+  of the entire laboratory
+</span>
+
+</body></html>

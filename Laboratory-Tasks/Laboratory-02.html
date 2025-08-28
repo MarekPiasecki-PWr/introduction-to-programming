@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html dir="ltr" lang="en">
+
+<head>
+<meta content="text/html; charset=ISO-8859-2" http-equiv="content-type">
+<meta content="Marek Piasecki" name="author">
+<title>[ITP] ARCHIVES - Introduction to Programming 2024 - LABORATORY</title>
+</head>
+
+<body>
+<span style="font-style: italic">
+<span style="font-weight: bold; color: red;">ARCHIVES '2024: &nbsp;&nbsp;</span> 
+
+"Introduction to Programming" &nbsp;LABORATORY - <a href="https://wefim.pwr.edu.pl/en/">Faculty of Electronics, Photonics and Microsystems</a>&nbsp;
+-&nbsp; Electronic and Computer Engineering&nbsp; (ECE)
+</span>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h1 style="font-family: Arial;">LABORATORY <u style="background-color: yellow;">&nbsp;L2&nbsp;</u> : Formatting the printouts + conditional instructions</h2>
+
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Introduction:</span>
+</div>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<p dir="ltr">Auxiliary teaching materials:<br>&nbsp; - Wikibooks / C Programming -&gt; <a href="https://en.wikibooks.org/wiki/C_Programming/Simple_input_and_output">Simple input and output</a>&nbsp;&nbsp;&nbsp; + &nbsp; <a href="https://cplusplus.com/reference/cstdio/printf/">printf</a> reference/documentation<br>&nbsp; - Wikibooks / C Programming -&gt; <a href="https://en.wikibooks.org/wiki/C_Programming/Program_flow_control">Program flow control</a></p>
+<p dir="ltr">Slides of <strong><a href="../Lecture-Slides/2024_L02_stdio_if_else_switch.pdf">Lecture_02</a></strong> - Input/Output, if/else, switch<br></p>
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L2.T1</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task to be performed:</span>
+</div>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<p dir="ltr">Write a program, which loads (from the keyboard) variables of four basic types:</p>
+<ol>
+    <li>integer number (preferably <span class="" style="background-color: rgb(152, 202, 62);">short</span>)<br></li>
+    <li>floating point number (preferably <span class="" style="background-color: rgb(152, 202, 62);">double</span>)</li>
+    <li>single character (<span class="" style="background-color: rgb(152, 202, 62);">char</span>)</li>
+    <li>text (using array text representation <span class="" style="background-color: rgb(152, 202, 62);">char text[30]</span> )<br></li>
+    <li>boolean (logical TRUE/FALSE) (<span class="" style="background-color: rgb(152, 202, 62);">int ?</span>)<br></li>
+</ol>and then display the collected values, in five following rows, in a formated form: <br>
+<ul>
+    <ul>
+        <li>on 15 positions,</li>
+        <li>aligned / justified to right, <br></li>
+        <li>with maximally 2 fraction digits</li>
+    </ul>
+</ul>
+
+Documentation:
+<ul>
+    <li>function <strong><a href="https://cplusplus.com/reference/cstdio/scanf/">scanf</a></strong>&nbsp; </li>
+    <li>function <strong><a href="https://cplusplus.com/reference/cstdio/printf/">printf</a></strong> <br></li>
+</ul>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L2.T2</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task:</span>
+</div>
+<br>
+<div style="margin-left: 40px;font-family: Arial;">
+
+Write a program that reads two calendar dates from
+the keyboard<br>
+(<span id="result_box" lang="en">each
+    date encoded by three </span>integers:
+<strong><span class="" style="background-color: rgb(152, 202, 62);">day</span></strong>, <strong><span class="" style="background-color: rgb(152, 202, 62);">month</span></strong>, <strong><span class="" style="background-color: rgb(152, 202, 62);">year</span></strong>)<br>
+<div>
+    and checks whether the <strong>second date is earlier</strong> than the first&nbsp; <em><span class="" style="color: rgb(152, 202, 62);">( Yes ?, No ?, are equal ? )</span></em><br></div>
+<div><br></div>
+<div>
+    <p dir="ltr"><em><strong>NOTE:</strong> All tasks from this laboratory, should be implemented using <strong>&lt;stdio.h&gt;</strong> library for all user interface <em>input/output </em>communication.</em></p>
+</div>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<h2 style="font-family: Arial;">TASK <u>L2.T3</u></h2>
+<div style="font-family: Arial;">
+<span style="color: rgb(152, 202, 62);">Description of the task:</span>
+</div>
+<br>
+
+<div style="margin-left: 40px;font-family: Arial;">
+
+<div><span lang="en"><span title="">Write a program that reads 4 integers from the keyboard<br></span></span></div>
+<div><span lang="en"><span title="">and then checks</span><span title=""> how many repetitions (of the same values) are among them</span></span><span lang="en"><span title="">: </span><br></span>
+    <ul>
+        <li><span lang="en"><span title="">"doubles":&nbsp; (2,5,3,10) , (2,<strong><span class="" style="background-color: rgb(152, 202, 62);">7</span></strong>,1,<strong><span class="" style="background-color: rgb(152, 202, 62);">7</span></strong>) , (<strong><span class="" style="background-color: rgb(255, 207, 53);">2</span></strong>,<strong><span class="" style="background-color: rgb(255, 207, 53);">2</span></strong>,<strong><span class="" style="background-color: rgb(125, 159, 211);">5</span></strong>,<strong><span class="" style="background-color: rgb(125, 159, 211);">5</span></strong>) , . . .<br></span></span></li>
+        <li><span lang="en"><span title="">"threes": (<strong><span class="" style="background-color: rgb(255, 207, 53);">6</span></strong>,3,<strong><span class="" style="background-color: rgb(255, 207, 53);">6</span></strong>,<strong><span class="" style="background-color: rgb(255, 207, 53);">6</span></strong>) , . . .<br></span></span></li>
+        <li><span lang="en"><span title="">&nbsp;or "fours": (<strong><span class="" style="background-color: rgb(152, 202, 62);">5</span></strong>,<strong><span class="" style="background-color: rgb(152, 202, 62);">5</span></strong>,<strong><span class="" style="background-color: rgb(152, 202, 62);">5</span></strong>,<strong><span class="" style="background-color: rgb(152, 202, 62);">5</span></strong>)</span></span><span lang="en"><span title=""></span></span></li>
+    </ul><span lang="en"><span title="">The checking process should use rules analogous to card games like Poker.</span></span>
+</div>
+
+
+</div>
+<br>
+<hr style="width: 100%; height: 2px;">
+
+<!-- ################################################################# -->
+
+<span style="font-style: italic">
+<a href="../[ITP] LABORATORY Introduction to Programming 2024.html">Return to the main description</a>
+  of the entire laboratory
+</span>
+
+</body></html>
